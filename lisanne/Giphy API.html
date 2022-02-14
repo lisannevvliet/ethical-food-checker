@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <ul />
+        <script>
+            // 1. Variables (a.k.a. bindings), on top of global scope.
+            const url = 'https://api.giphy.com/v1/gifs/search?q=pokemon&api_key=jhcL7QPGb2ObrOHw1dEJuL9w2j71zfEk&limit=20'
+
+            // 2. The story.
+            getData()
+
+            // 3. Functions.
+            function getData(){
+                // Get data asynchronously.
+                fetch(url)
+                    .then(function(response){
+                        return response.json() // Stream.
+                    })
+                    .then(function(data){
+                        const ul = $('ul')
+                        for (i in data.data) {
+                            ul.insertAdjacentHTML('afterbegin', `<li><img src='https://media.giphy.com/media/${data.data[i].id}/giphy.gif' alt='${data.data[0].title}'</li>`)
+                        }
+                    })
+            }
+
+            function $ (element) {
+                return document.querySelector(element)
+            }
+        </script>
+    </body>
+</html>

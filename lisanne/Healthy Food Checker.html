@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form id='form'>
+            <input type='text' name='name' placeholder='Product name' required> <button type='submit'>Search</button>
+        </form>
+        <div id='results' />
+        <script>
+            const form = document.getElementById('form');
+            const results = document.getElementById('results');
+            form.addEventListener('submit', search);
+
+            function search(event) {
+                document.getElementById('results').innerHTML = '';
+                get(document.forms['form']['name'].value)
+                event.preventDefault()
+            }
+
+            function get(name){
+                const url = `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${name}&search_simple=1&action=process&json=1`
+                fetch(url)
+                    .then(function(response){
+                        return response.json()
+                    })
+                    .then(function(data){
+                        const names = []
+                        const div = document.querySelector('div')
+                        for (i in data.products) {
+                            if (data.products[i].product_name != '') {
+                                names.push(data.products[i].product_name)
+                            }
+                        }
+                        div.insertAdjacentHTML('afterbegin', `<p>${names.join('<br>')}</p>`)
+                    })
+            }
+        </script>
+    </body>
+</html>
