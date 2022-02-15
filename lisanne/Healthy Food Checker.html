@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <style>
+            body {
+                font-family: system-ui;
+            }
+          </style>
+        </head>
     <body>
         <form id='form'>
             <input type='text' name='name' placeholder='Product name' required> <button type='submit'>Search</button>
         </form>
-        <div id='results' />
+        <ul id='results' />
         <script>
             const form = document.getElementById('form')
             const results = document.getElementById('results')
@@ -23,14 +30,11 @@
                         return response.json()
                     })
                     .then(function(data){
-                        const names = []
-                        const div = document.querySelector('div')
                         for (i in data.products) {
                             if (data.products[i].product_name != '') {
-                                names.push(data.products[i].product_name)
+                                document.querySelector('ul').insertAdjacentHTML('afterbegin', `<li>${data.products[i].product_name}</li>`)
                             }
                         }
-                        div.insertAdjacentHTML('afterbegin', `<p>${names.join('<br>')}</p>`)
                     })
             }
         </script>
