@@ -44,27 +44,23 @@
         <p id='instructions'>Zoek een product via de bovenstaande zoekbalk.</p>
         <div id='loader'></div>
         <script>
-            let counter = 1
             document.getElementById('form').addEventListener('submit', function() {
-                search(event)
+                search(event, 'search')
             })
             document.getElementById('more').addEventListener('click', function() {
-                more(event)
+                search(event, 'more')
             })
 
-            function search(event) {
+            function search(event, type) {
+                let counter = 1
                 document.getElementById('instructions').style.display = 'none'
                 document.getElementById('loader').style.display = 'block'
-                document.getElementById('results').innerHTML = ''
-                counter = 1
-                get(document.forms['form']['name'].value, counter)
-                event.preventDefault()
-            }
-
-            function more(event) {
-                document.getElementById('instructions').style.display = 'none'
-                document.getElementById('loader').style.display = 'block'
-                counter++
+                if (type === 'search') {
+                    document.getElementById('results').innerHTML = ''
+                    counter = 1
+                } else {
+                    counter++
+                }
                 get(document.forms['form']['name'].value, counter)
                 event.preventDefault()
             }
