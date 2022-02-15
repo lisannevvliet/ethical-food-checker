@@ -45,9 +45,13 @@
         <div id='loader'></div>
         <script>
             let counter = 1
-            document.getElementById('form').addEventListener('submit', search)
-            document.getElementById('more').addEventListener('click', more)
-            
+            document.getElementById('form').addEventListener('submit', function() {
+                search(event)
+            })
+            document.getElementById('more').addEventListener('click', function() {
+                more(event)
+            })
+
             function search(event) {
                 document.getElementById('instructions').style.display = 'none'
                 document.getElementById('loader').style.display = 'block'
