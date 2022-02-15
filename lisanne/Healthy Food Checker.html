@@ -6,12 +6,12 @@
         </form>
         <div id='results' />
         <script>
-            const form = document.getElementById('form');
-            const results = document.getElementById('results');
-            form.addEventListener('submit', search);
+            const form = document.getElementById('form')
+            const results = document.getElementById('results')
+            form.addEventListener('submit', search)
 
             function search(event) {
-                document.getElementById('results').innerHTML = '';
+                document.getElementById('results').innerHTML = ''
                 get(document.forms['form']['name'].value)
                 event.preventDefault()
             }
