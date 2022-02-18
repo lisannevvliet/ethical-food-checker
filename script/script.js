@@ -1,21 +1,21 @@
-$('#form').addEventListener('submit', function() {
+$('.form').addEventListener('submit', function() {
     search(event, 'search')
 })
-$('#more').addEventListener('click', function() {
+$('.more').addEventListener('click', function() {
     search(event, 'more')
 })
 
 function search(event, type) {
     let counter = 1
-    $('#instructions').style.display = 'none'
-    $('#loader').style.display = 'block'
+    $('.instructions').style.display = 'none'
+    $('.loader').style.display = 'block'
     if (type === 'search') {
-        $('#results').innerHTML = ''
+        $('.results').innerHTML = ''
         counter = 1
     } else {
         counter++
     }
-    get(document.forms['form']['name'].value, counter)
+    get($('.name').value, counter)
     event.preventDefault()
 }
 
@@ -32,17 +32,17 @@ function get(name, page){
                         $('ul').insertAdjacentHTML('beforeend', `<li>${data.products[i].product_name}</li>`)
                     }
                 }
-                $('#more').style.display = 'block'
+                $('.more').style.display = 'block'
             } else {
-                $('#instructions').style.display = 'block'
+                $('.instructions').style.display = 'block'
                 if (page != 1) {
-                    $('#instructions').innerHTML = `Dit waren alle producten met de naam \'${name}\'.`
-                    $('#more').style.display = 'none'
+                    $('.instructions').innerHTML = `Dit waren alle producten met de naam \'${name}\'.`
+                    $('.more').style.display = 'none'
                 } else {
-                    $('#instructions').innerHTML = `Geen producten gevonden met de naam \'${name}\'. Probeer het opnieuw.`
+                    $('.instructions').innerHTML = `Geen producten gevonden met de naam \'${name}\'. Probeer het opnieuw.`
                 }
             }
-            $('#loader').style.display = 'none'
+            $('.loader').style.display = 'none'
         })
 }
 
