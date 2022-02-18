@@ -9,6 +9,7 @@ $('.more').addEventListener('click', function() {
 
 function search(event, type) {
     $('.instructions').style.display = 'none'
+    $('.more').style.display = 'none'
     $('.loader').style.display = 'block'
     if (type === 'search') {
         $('.results').innerHTML = ''
