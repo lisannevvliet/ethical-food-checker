@@ -1,3 +1,5 @@
+let counter = 1
+
 $('.form').addEventListener('submit', function() {
     search(event, 'search')
 })
@@ -6,7 +8,6 @@ $('.more').addEventListener('click', function() {
 })
 
 function search(event, type) {
-    let counter = 1
     $('.instructions').style.display = 'none'
     $('.loader').style.display = 'block'
     if (type === 'search') {
