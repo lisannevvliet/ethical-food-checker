@@ -4,7 +4,7 @@ $('.form').addEventListener('submit', function() {
     search(event, 'search')
 })
 $('.more').addEventListener('click', function() {
-    search(event, 'more')
+    search(event, '')
 })
 
 function search(event, type) {
