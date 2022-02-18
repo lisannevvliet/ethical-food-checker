@@ -1,16 +1,16 @@
-document.getElementById('form').addEventListener('submit', function() {
+$('#form').addEventListener('submit', function() {
     search(event, 'search')
 })
-document.getElementById('more').addEventListener('click', function() {
+$('#more').addEventListener('click', function() {
     search(event, 'more')
 })
 
 function search(event, type) {
     let counter = 1
-    document.getElementById('instructions').style.display = 'none'
-    document.getElementById('loader').style.display = 'block'
+    $('#instructions').style.display = 'none'
+    $('#loader').style.display = 'block'
     if (type === 'search') {
-        document.getElementById('results').innerHTML = ''
+        $('#results').innerHTML = ''
         counter = 1
     } else {
         counter++
@@ -29,19 +29,23 @@ function get(name, page){
             if (data.products.length != 0) {
                 for (i in data.products) {
                     if (data.products[i].product_name != '') {
-                        document.querySelector('ul').insertAdjacentHTML('beforeend', `<li>${data.products[i].product_name}</li>`)
+                        $('ul').insertAdjacentHTML('beforeend', `<li>${data.products[i].product_name}</li>`)
                     }
                 }
-                document.getElementById('more').style.display = 'block'
+                $('#more').style.display = 'block'
             } else {
-                document.getElementById('instructions').style.display = 'block'
+                $('#instructions').style.display = 'block'
                 if (page != 1) {
-                    document.getElementById('instructions').innerHTML = `Dit waren alle producten met de naam \'${name}\'.`
-                    document.getElementById('more').style.display = 'none'
+                    $('#instructions').innerHTML = `Dit waren alle producten met de naam \'${name}\'.`
+                    $('#more').style.display = 'none'
                 } else {
-                    document.getElementById('instructions').innerHTML = `Geen producten gevonden met de naam \'${name}\'. Probeer het opnieuw.`
+                    $('#instructions').innerHTML = `Geen producten gevonden met de naam \'${name}\'. Probeer het opnieuw.`
                 }
             }
-            document.getElementById('loader').style.display = 'none'
+            $('#loader').style.display = 'none'
         })
+}
+
+function $(element) {
+    return document.querySelector(element)
 }
