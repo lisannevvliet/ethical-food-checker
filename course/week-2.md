@@ -156,3 +156,10 @@ A good app comes with a good README.md in which you describe the application. Ad
 
 On GitHub you can use Issues to suggest changes to a colleague developer's code. You can do this online via the GitHub website.
 Create at least 2 issues for different peer students. You can look at improvements / suggestions for or questions about HTML, CSS & JavaScript code.
+
+### Resources
+
+- [Vertical and horizontal peer review](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/peer-review-1.md)
+- [Best practices WAFS](https://github.com/cmda-minor-web/best-practices/blob/master/web-app-from-scratch.md)
+
+
