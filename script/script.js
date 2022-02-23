@@ -31,7 +31,25 @@ function get(name, page){
             if (data.products.length != 0) {
                 for (i in data.products) {
                     if (data.products[i].product_name != '') {
-                        $('ul').insertAdjacentHTML('beforeend', `<li>${data.products[i].product_name}</li>`)
+                        let color = 'black'
+                        let ingredients = ''
+                        let ingredients_analysis_tags = ''
+                        if (data.products[i].ingredients_analysis_tags) {
+                            if (data.products[i].ingredients_analysis_tags[1] == 'en:vegan') {
+                                color = 'green'
+                            } else if (data.products[i].ingredients_analysis_tags[1] == 'en:vegan-status-unknown') {
+                                color = 'orange'
+                            } else {
+                                color = 'red'
+                            }
+                        }
+                        if (data.products[i].ingredients_text) { ingredients = `${data.products[i].ingredients_text}<br>` }
+                        if (data.products[i].ingredients_analysis_tags) { ingredients_analysis_tags = `${data.products[i].ingredients_analysis_tags}<br>` }
+                        $('ul').insertAdjacentHTML('beforeend', `<li><span style='color:${color}'>${data.products[i].product_name}</span><br>
+                        ${ingredients}
+                        ${ingredients_analysis_tags}
+                        <img src='${data.products[i].image_small_url}' alt='${data.products[i].product_name}'><br><br>
+                        </li>`)
                     }
                 }
                 if (data.products.length == 24) {
