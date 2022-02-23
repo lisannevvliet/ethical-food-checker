@@ -22,7 +22,7 @@ function search(event, type) {
 }
 
 function get(name, page){
-    const url = `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${name}&search_simple=1&action=process&json=1&page=${page}`
+    const url = `https://nl.openfoodfacts.org/cgi/search.pl?search_terms=${name}&search_simple=1&action=process&json=1&page=${page}`
     fetch(url)
         .then(function(response) {
             return response.json()
