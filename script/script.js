@@ -11,7 +11,7 @@ function search(event, type) {
     $('.instructions').style.display = 'none'
     $('.more').style.display = 'none'
     $('.loader').style.display = 'block'
-    if (type === 'search') {
+    if (type == 'search') {
         $('.results').innerHTML = ''
         counter = 1
     } else {
@@ -34,15 +34,12 @@ function get(name, page){
                         $('ul').insertAdjacentHTML('beforeend', `<li>${data.products[i].product_name}</li>`)
                     }
                 }
-                $('.more').style.display = 'block'
+                if (data.products.length == 24) {
+                    $('.more').style.display = 'block'
+                }
             } else {
                 $('.instructions').style.display = 'block'
-                if (page != 1) {
-                    $('.instructions').innerHTML = `Dit waren alle producten met de naam \'${name}\'.`
-                    $('.more').style.display = 'none'
-                } else {
-                    $('.instructions').innerHTML = `Geen producten gevonden met de naam \'${name}\'. Probeer het opnieuw.`
-                }
+                $('.instructions').innerHTML = `Geen producten gevonden met de naam \'${name}\'. Probeer het opnieuw.`
             }
             $('.loader').style.display = 'none'
         })
