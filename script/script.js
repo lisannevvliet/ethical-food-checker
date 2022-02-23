@@ -45,10 +45,10 @@ function get(name, page){
                         }
                         if (data.products[i].ingredients_text) { ingredients = `${data.products[i].ingredients_text}<br>` }
                         if (data.products[i].ingredients_analysis_tags) { ingredients_analysis_tags = `${data.products[i].ingredients_analysis_tags}<br>` }
-                        $('ul').insertAdjacentHTML('beforeend', `<li><span style='color:${color}'>${data.products[i].product_name}</span><br>
+                        $('ul').insertAdjacentHTML('beforeend', `<li><button class='product'><span style='color:${color}'>${data.products[i].product_name}</span><br>
                         ${ingredients}
                         ${ingredients_analysis_tags}
-                        <img src='${data.products[i].image_small_url}' alt='${data.products[i].product_name}'><br><br>
+                        <img src='${data.products[i].image_small_url}' alt='${data.products[i].product_name}'></button><br><br>
                         </li>`)
                     }
                 }
