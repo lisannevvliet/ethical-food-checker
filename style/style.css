@@ -25,11 +25,15 @@ ul {
 }
 
 .product {
-    border: none;
-    background-color: inherit;
     font-size: 16px;
-    cursor: pointer;
     text-align: left;
+    width: 100%;
+    background-color: inherit;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px lightgrey;
+    padding: 10px;
+    cursor: pointer;
 }
 
 /* Safari */
