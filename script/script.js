@@ -37,7 +37,7 @@ function get(name, page){
                         if (data.products[i].ingredients_analysis_tags) {
                             if (data.products[i].ingredients_analysis_tags[1] == 'en:vegan') {
                                 color = 'green'
-                            } else if (data.products[i].ingredients_analysis_tags[1] == 'en:vegan-status-unknown') {
+                            } else if (data.products[i].ingredients_analysis_tags[1] == 'en:maybe-vegan' || data.products[i].ingredients_analysis_tags[1] == 'en:vegan-status-unknown') {
                                 color = 'orange'
                             } else {
                                 color = 'red'
