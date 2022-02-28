@@ -32,7 +32,7 @@ export function getData(first) {
                 renderHTML(data)
             // If no products exist, tell that to the user.
             } else {
-                $('.instructions').style.display = 'block'
+                $('.instructions').style.display = 'flex'
                 $('.instructions').innerHTML = `Geen producten gevonden met de naam \'${$('.name').value}\'. Probeer het opnieuw.`
             }
 

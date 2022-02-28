@@ -1,9 +1,17 @@
 body {
     font-family: system-ui;
+    background: url('../img/rm422-047.jpg') #eaf3e4 no-repeat fixed center;
+    background-size: cover;
+}
+
+.form, .instructions {
+    display: flex;
+    justify-content: center;
 }
 
 .more {
     display: none;
+    margin: auto;
 }
 
 .loader {
@@ -16,6 +24,12 @@ body {
     margin-block-start: 1em;
     margin-inline-start: 1em;
     display: none;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 ul {
@@ -23,19 +37,31 @@ ul {
     padding: 0;
 }
 
+li {
+    display: flex;
+    justify-content: center;
+}
+
 .product {
     font-size: 16px;
     text-align: left;
-    width: 100%;
-    background-color: inherit;
-    border: 1px solid lightgrey;
+    width: 50%;
+    background-color: #ffffffc8;
+    border: 1px solid white;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px lightgrey;
+    box-shadow: 5px 5px 10px white;
     padding: 10px;
     cursor: pointer;
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.image {
+    display: flex;
+    justify-content: left;
+}
+
+.span {
+    margin: auto;
 }
