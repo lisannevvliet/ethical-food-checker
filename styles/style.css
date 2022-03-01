@@ -67,6 +67,15 @@ body {
 .more {
     display: none;
     margin: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #63b776;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 26px;
+    margin-bottom: 25px;
 }
 
 .loader {
@@ -80,6 +89,7 @@ body {
     margin-inline-start: 1em;
     display: none;
     margin: auto;
+    margin-bottom: 25px;
 }
 
 @keyframes spin {
