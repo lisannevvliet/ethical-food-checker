@@ -18,7 +18,15 @@ export function get(first) {
     }
 
     // URL for the search request.
-    const url = `https://nl.openfoodfacts.org/cgi/search.pl?search_terms=${$('.name').value}&search_simple=1&action=process&json=1&page=${page}`
+    let url = ''
+    // Boolean which shows if the search query is a barcode.
+    const barcode = /^\d+$/.test($('.query').value)
+
+    if (barcode) {
+        url = `https://nl.openfoodfacts.org/cgi/search.pl?code=${$('.query').value}&search_simple=1&action=process&json=1&page=${page}`
+    } else {
+        url = `https://nl.openfoodfacts.org/cgi/search.pl?search_terms=${$('.query').value}&search_simple=1&action=process&json=1&page=${page}`
+    }
     
     // Send a search request to the API.
     fetch(url)
@@ -31,12 +39,22 @@ export function get(first) {
                 render(data)
             } else {
                 $('.instructions').style.display = 'flex'
+                let type = ''
+                
+                // Assign a name to the search query type.
+                if (barcode) {
+                    type = 'barcode'
+                } else {
+                    type = 'name'
+                }
+
                 // If no products exist, tell that to the user.
                 if (first) {
-                    $('.instructions').innerHTML = `No products were found with the name '${$('.name').value}'. Please try again.`
+                    $('.instructions').innerHTML = `No products were found with the ${type} '${$('.query').value}'.<br>
+                    Please try again.`
                 // If all products are already loaded, tell that to the user.
                 } else {
-                    $('.instructions').innerHTML = `All products with the name '${$('.name').value}' are already shown.`
+                    $('.instructions').innerHTML = `All products with the ${type} '${$('.query').value}' are already shown.`
                 }
             }
 

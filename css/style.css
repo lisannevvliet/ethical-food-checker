@@ -7,9 +7,10 @@ body {
 .form, .instructions {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
-.name {
+.query {
     width: 40%;
     border: 1px solid lightgrey;
     border-radius: 5px;
