@@ -5,31 +5,32 @@ import { render } from './render.js';
 let page = 1
 
 export function get(first) {
-    // Hide the text, 'More' button and loader upon searching.
-    $('.instructions').style.display = 'none'
-    $('.loader').style.display = 'block'
+    if ($('.query').value != '') {
+        // Hide the text, 'More' button and loader upon searching.
+        $('.instructions').style.display = 'none'
+        $('.loader').style.display = 'block'
 
-    // Trace whether the first page should be loaded.
-    if (first) {
-        $('.results').innerHTML = ''
-        page = 1
-    } else {
-        page++
-    }
+        // Trace whether the first page should be loaded.
+        if (first) {
+            $('.results').innerHTML = ''
+            page = 1
+        } else {
+            page++
+        }
 
-    // URL for the search request.
-    let url = ''
-    // Boolean which shows if the search query is a barcode.
-    const barcode = /^\d+$/.test($('.query').value)
+        // URL for the search request.
+        let url = ''
+        // Boolean which shows if the search query is a barcode.
+        const barcode = /^\d+$/.test($('.query').value)
 
-    if (barcode) {
-        url = `https://nl.openfoodfacts.org/cgi/search.pl?code=${$('.query').value}&search_simple=1&action=process&json=1&page=${page}`
-    } else {
-        url = `https://nl.openfoodfacts.org/cgi/search.pl?search_terms=${$('.query').value}&search_simple=1&action=process&json=1&page=${page}`
-    }
+        if (barcode) {
+            url = `https://nl.openfoodfacts.org/cgi/search.pl?code=${$('.query').value}&search_simple=1&action=process&json=1&page=${page}`
+        } else {
+            url = `https://nl.openfoodfacts.org/cgi/search.pl?search_terms=${$('.query').value}&search_simple=1&action=process&json=1&page=${page}`
+        }
     
-    // Send a search request to the API.
-    fetch(url)
+        // Send a search request to the API.
+        fetch(url)
         .then(function(response) {
             return response.json()
         })
@@ -61,4 +62,5 @@ export function get(first) {
             // Hide the loader once the data is fetched.
             $('.loader').style.display = 'none'
         })
+    }
 }
