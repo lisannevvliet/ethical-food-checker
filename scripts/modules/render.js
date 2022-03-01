@@ -11,7 +11,7 @@ export function render(data) {
             if (data.products[i].image_small_url) {
                 image = `<div class='image'><img src='${data.products[i].image_small_url}' alt='${data.products[i].product_name}'></div>`
             } else {
-                image = `<div class='image'><img src='img/placeholder-image.png' alt='${data.products[i].product_name}'></div>`
+                image = `<div class='image'><img src='images/placeholder-image.png' alt='${data.products[i].product_name}'></div>`
             }
             
             // Add the product name, ingredients and image to the page.
