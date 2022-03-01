@@ -31,3 +31,11 @@ window.onscroll = function() { sticky($('.form')) };
 //         get(false)
 //     }
 // })
+
+window.onhashchange = locationHashChanged;
+
+function locationHashChanged() {
+    if (location.hash === '#explanation') {
+        console.log("You're visiting a cool feature!")
+    }
+}

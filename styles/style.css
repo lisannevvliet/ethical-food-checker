@@ -117,7 +117,6 @@ li {
     border: 1px solid white;
     border-radius: 5px;
     padding: 10px;
-    cursor: pointer;
     display: flex;
     margin-bottom: 15px;
     align-items: center;
@@ -164,28 +163,39 @@ li {
     margin: auto;
 }
 
-/* .collapsible {
+.explanation {
     color: black;
-    background-color: #ffffffbf;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px 5px 0 5px;
-    cursor: pointer;
-    height: 25px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #d3eacd;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
     position: fixed;
-    top: 5px;
-    right: 5px;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    border-radius: 0 5px 0 0;
 }
 
-.content {
-    line-height: 1.5;
-    background-color: #ffffffbf;
-    border-radius: 5px 0 5px 5px;
-    display: none;
+h2 {
+    font-family: playlist-script, system-ui;
+}
+
+#section {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
     position: fixed;
-    padding: 0 5px;
-    top: 30px;
-    right: 7px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+}
+
+/* .header, .text {
+    position: fixed;
+    top: 40%;
+    left: 50%;
 } */
 
 .tooltip {

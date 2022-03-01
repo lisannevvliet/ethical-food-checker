@@ -15,10 +15,10 @@ export function render(data) {
             }
             
             // Add the product name, ingredients and image to the page.
-            $('ul').insertAdjacentHTML('beforeend',`<li><button class='product'>
+            $('ul').insertAdjacentHTML('beforeend',`<li><div class='product'>
             ${image}
             <span class='span'>${data.products[i].product_name}<br> ${emojis(data.products[i].ingredients_analysis_tags)}</span><br>
-            </button><br><br></li>`)
+            </div><br><br></li>`)
         }
     }
 
