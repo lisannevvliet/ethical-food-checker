@@ -7,12 +7,8 @@ export function render(data) {
             // Empty list of ingredients.
             let ingredients = ''
 
-            // console.log(veganStatus(data.products[i].ingredients_analysis_tags).join(' '))
-
             // Fill the list of ingredients if there are any.
             if (data.products[i].ingredients_text) { ingredients = `Ingredients: ${data.products[i].ingredients_text}.<br>` }
-
-            // console.log(data.products[i].ingredients_analysis_tags)
             
             // Add the product name, ingredients and image to the page.
             $('ul').insertAdjacentHTML('beforeend',`<li><button class='product'>
