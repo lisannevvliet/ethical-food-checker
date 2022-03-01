@@ -9,6 +9,30 @@ body {
     justify-content: center;
 }
 
+.name {
+    width: 40%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-size: 16px;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
+.submit {
+    position: sticky;
+    color: white;
+    font-weight: bold;
+    background-color: #63b776;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    padding: 16px 32px;
+    margin: 4px 2px;    
+    width: 10%;
+}
+
 .more {
     display: none;
     margin: auto;
@@ -95,6 +119,7 @@ li {
 }
 
 .span {
+    font-weight: bold;
     margin: auto;
 }
 

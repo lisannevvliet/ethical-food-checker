@@ -7,7 +7,6 @@ let page = 1
 export function get(first) {
     // Hide the text, 'More' button and loader upon searching.
     $('.instructions').style.display = 'none'
-    $('.more').style.display = 'none'
     $('.loader').style.display = 'block'
 
     // Trace whether the first page should be loaded.
@@ -30,10 +29,15 @@ export function get(first) {
             // If products exist, render them in the HTML.
             if (data.products.length != 0) {
                 render(data)
-            // If no products exist, tell that to the user.
             } else {
                 $('.instructions').style.display = 'flex'
-                $('.instructions').innerHTML = `Geen producten gevonden met de naam \'${$('.name').value}\'. Probeer het opnieuw.`
+                // If no products exist, tell that to the user.
+                if (first) {
+                    $('.instructions').innerHTML = `No products were found with the name '${$('.name').value}'. Please try again.`
+                // If all products are already loaded, tell that to the user.
+                } else {
+                    $('.instructions').innerHTML = `All products with the name '${$('.name').value}' are already shown.`
+                }
             }
 
             // Hide the loader once the data is fetched.

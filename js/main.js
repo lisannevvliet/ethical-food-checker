@@ -17,6 +17,9 @@ $('.form').addEventListener('submit', function(event) {
     event.preventDefault()
 })
 
-$('.more').addEventListener('click', function() {
-    get(false)
+window.addEventListener('scroll', () => {
+    // Load more products if the end of the page is reached.
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+        get(false)
+    }
 })
