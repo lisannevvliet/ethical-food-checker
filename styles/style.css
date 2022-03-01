@@ -48,7 +48,7 @@ body {
     font-size: 16px;
     background-color: #63b776;
     border: none;
-    border-radius: 0 5% 5% 0;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
     padding: 16px 32px;
 }
@@ -148,7 +148,7 @@ li {
     background-color: #ffffffbf;
     font-size: 16px;
     border: none;
-    border-radius: 10% 10% 0 10%;
+    border-radius: 5px 5px 0 5px;
     cursor: pointer;
     height: 25px;
     position: fixed;
@@ -159,10 +159,44 @@ li {
 .content {
     line-height: 1.5;
     background-color: #ffffffbf;
-    border-radius: 10% 0% 10% 10%;
+    border-radius: 5px 0 5px 5px;
     display: none;
     position: fixed;
     padding: 0 5px;
     top: 30px;
     right: 7px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #000000bf;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #000000bf transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
