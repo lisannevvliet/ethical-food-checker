@@ -1,10 +1,10 @@
 import { $ } from './$.js';
-import { renderHTML } from './renderHTML.js';
+import { render } from './render.js';
 
 // Counter for the page number.
 let page = 1
 
-export function getData(first) {
+export function get(first) {
     // Hide the text, 'More' button and loader upon searching.
     $('.instructions').style.display = 'none'
     $('.more').style.display = 'none'
@@ -29,7 +29,7 @@ export function getData(first) {
         .then(function(data) {
             // If products exist, render them in the HTML.
             if (data.products.length != 0) {
-                renderHTML(data)
+                render(data)
             // If no products exist, tell that to the user.
             } else {
                 $('.instructions').style.display = 'flex'

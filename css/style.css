@@ -46,15 +46,20 @@ li {
     font-size: 16px;
     text-align: left;
     width: 75%;
-    background-color: #ffffffc8;
+    background-color: #ffffffbf;
     border: 1px solid white;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px white;
     padding: 10px;
     cursor: pointer;
     display: flex;
     margin-bottom: 15px;
     align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .product {
+        width: 50%;
+    }
 }
 
 .image {
@@ -66,8 +71,25 @@ li {
     margin: auto;
 }
 
-@media only screen and (min-width: 768px) {
-    .product {
-        width: 50%;
-    }
+.collapsible {
+    background-color: #ffffffbf;
+    border: none;
+    border-radius: 10% 10% 0 10%;
+    cursor: pointer;
+    height: 25px;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+}
+
+.content {
+    font-size: 11px;
+    line-height: 1.5;
+    background-color: #ffffffbf;
+    border-radius: 10% 0% 10% 10%;
+    display: none;
+    position: fixed;
+    padding: 0 5px;
+    top: 30px;
+    right: 7px;
 }

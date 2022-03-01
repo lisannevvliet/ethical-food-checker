@@ -1,21 +1,23 @@
 import { $ } from './$.js';
-import { veganStatus } from './veganStatus.js';
+import { emojis } from './emojis.js';
 
-export function renderHTML(data) {
+export function render(data) {
     for (let i in data.products) {
         if (data.products[i].product_name != '') {
             // Empty list of ingredients.
             let ingredients = ''
-            // Retrieve the color which shows the vegan status.
-            const emoji = veganStatus(data.products[i].ingredients_analysis_tags)
+
+            // console.log(veganStatus(data.products[i].ingredients_analysis_tags).join(' '))
 
             // Fill the list of ingredients if there are any.
             if (data.products[i].ingredients_text) { ingredients = `Ingredients: ${data.products[i].ingredients_text}.<br>` }
+
+            // console.log(data.products[i].ingredients_analysis_tags)
             
             // Add the product name, ingredients and image to the page.
             $('ul').insertAdjacentHTML('beforeend',`<li><button class='product'>
             <img src='${data.products[i].image_small_url}' alt='${data.products[i].product_name}' class='image'>
-            <span class='span'><strong>${data.products[i].product_name}</strong> ${emoji}</span><br>
+            <span class='span'><strong>${data.products[i].product_name}</strong> ${emojis(data.products[i].ingredients_analysis_tags)}</span><br>
             </button><br><br></li>`)
         }
     }

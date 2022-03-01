@@ -1,15 +1,22 @@
-import { getData } from './modules/getData.js';
+import { get } from './modules/get.js';
+import { $ } from './modules/$.js';
 
-document.querySelector('.form').addEventListener('submit', function(event) {
-    getData(true)
+$('.collapsible').addEventListener('click', function() {
+    if ($('.content').style.display == 'block') {
+        $('.content').style.display = 'none'
+    } else {
+        $('.content').style.display = 'block'
+    }
+})
+
+
+$('.form').addEventListener('submit', function(event) {
+    get(true)
 
     // Prevent the page from reloading.
     event.preventDefault()
 })
 
-document.querySelector('.more').addEventListener('click', function(event) {
-    getData(false)
-
-    // Prevent the page from reloading.
-    event.preventDefault()
+$('.more').addEventListener('click', function() {
+    get(false)
 })
