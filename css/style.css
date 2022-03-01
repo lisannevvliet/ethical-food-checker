@@ -43,10 +43,11 @@ li {
 }
 
 .product {
+    color: black;
     font-size: 16px;
     line-height: 1.5;
     text-align: center;
-    width: 75%;
+    width: 100%;
     background-color: #ffffffbf;
     border: 1px solid white;
     border-radius: 5px;
@@ -58,6 +59,11 @@ li {
 }
 
 @media only screen and (min-width: 768px) {
+    .product {
+        width: 75%;
+    }
+}
+@media only screen and (min-width: 992px) {
     .product {
         width: 50%;
     }
@@ -93,6 +99,7 @@ li {
 }
 
 .collapsible {
+    color: black;
     background-color: #ffffffbf;
     border: none;
     border-radius: 10% 10% 0 10%;
