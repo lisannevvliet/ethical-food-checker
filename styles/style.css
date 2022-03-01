@@ -42,6 +42,16 @@ body {
     padding: 12px 20px 12px 40px;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+
 .submit {
     position: sticky;
     color: white;
@@ -90,7 +100,7 @@ li {
 .product {
     color: black;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 2;
     text-align: center;
     width: 100%;
     background-color: #ffffffbf;

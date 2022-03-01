@@ -21,4 +21,9 @@ export function render(data) {
             </button><br><br></li>`)
         }
     }
+
+    // If there are more pages, show the 'More' button.
+    if (data.products.length == 24) {
+        $('.more').style.display = 'block'
+    }
 }

@@ -1,4 +1,5 @@
 import { get } from './modules/get.js';
+import { sticky } from './modules/sticky.js';
 import { $ } from './modules/$.js';
 
 $('.collapsible').addEventListener('click', function() {
@@ -9,7 +10,6 @@ $('.collapsible').addEventListener('click', function() {
     }
 })
 
-
 $('.form').addEventListener('submit', function(event) {
     get(true)
 
@@ -17,9 +17,16 @@ $('.form').addEventListener('submit', function(event) {
     event.preventDefault()
 })
 
-window.addEventListener('scroll', () => {
-    // Load more products if the end of the page is reached.
-    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
-        get(false)
-    }
+$('.more').addEventListener('click', function() {
+    get(false)
 })
+
+// Make the search bar and submit button sticky.
+window.onscroll = function() { sticky($('.form')) };
+
+// Load more products if the end of the page is reached.
+// window.addEventListener('scroll', () => {
+//     if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+//         get(false)
+//     }
+// })

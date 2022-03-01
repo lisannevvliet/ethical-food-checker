@@ -6,8 +6,9 @@ let page = 1
 
 export function get(first) {
     if ($('.query').value != '') {
-        // Hide the text, 'More' button and loader upon searching.
+        // Hide the text, 'More' button and show the loader upon searching.
         $('.instructions').style.display = 'none'
+        $('.more').style.display = 'none'
         $('.loader').style.display = 'block'
 
         // Trace whether the first page should be loaded.
