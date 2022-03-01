@@ -164,7 +164,7 @@ li {
     margin: auto;
 }
 
-.collapsible {
+/* .collapsible {
     color: black;
     background-color: #ffffffbf;
     font-size: 16px;
@@ -186,7 +186,7 @@ li {
     padding: 0 5px;
     top: 30px;
     right: 7px;
-}
+} */
 
 .tooltip {
     position: relative;
