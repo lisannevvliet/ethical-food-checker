@@ -31,13 +31,14 @@ body {
 }
 
 .query {
-    width: 40%;
+    width: 37%;
     border: 1px solid white;
     border-radius: 5px 0 0 5px;
     font-size: 16px;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px; 
+    background-image: url('../images/search.png');
+    background-position: 13px 16px; 
     background-repeat: no-repeat;
+    background-size: 15px;
     padding: 12px 20px 12px 40px;
 }
 
@@ -174,16 +175,18 @@ li {
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 100px;
     background-color: #000000bf;
     color: white;
+    font-weight: normal;
+    font-size: 14px;
     text-align: center;
     border-radius: 5px;
     padding: 5px 0;
     position: absolute;
     top: 150%;
     left: 50%;
-    margin-left: -60px;
+    margin-left: -50px;
 }
 
 .tooltip .tooltiptext::after {
