@@ -44,7 +44,8 @@ li {
 
 .product {
     font-size: 16px;
-    text-align: left;
+    line-height: 1.5;
+    text-align: center;
     width: 75%;
     background-color: #ffffffbf;
     border: 1px solid white;
@@ -65,6 +66,26 @@ li {
 .image {
     display: flex;
     justify-content: left;
+    width: 100px;
+    height: 100px;
+}
+
+.image img {
+    max-height: 100px;
+    max-width: 100px;
+    margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .image img {
+        max-height: 150px;
+        max-width: 150px;
+    }
 }
 
 .span {
