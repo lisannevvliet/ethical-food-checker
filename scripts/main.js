@@ -25,6 +25,7 @@ window.onhashchange = function() {
 $(".close").addEventListener("click", function() {
     // https://stackoverflow.com/questions/1397329/how-to-remove-the-hash-from-window-location-url-with-javascript-without-page-r
     history.pushState("", document.title, window.location.pathname + window.location.search);
+    $("#section").style.display = "none"
 })
 
 // Show and hide content upon clicking a button.
