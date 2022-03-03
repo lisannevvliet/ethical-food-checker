@@ -2,22 +2,24 @@
 <html>
     <head>
         <title>Ethical Food Checker</title>
-        <link rel='stylesheet' href='styles/style.css'>
-        <script type='module' src='scripts/main.js'></script>
+        <link rel="stylesheet" href="styles/style.css">
+        <script type="module" src="scripts/main.js"></script>
     </head>
     <body>
-        <h1 class='title'>Ethical<br>Food Checker</h1>
-        <a href="#explanation" class='explanation'>Explanation</a>
-        <form class='form'>
-            <input type='text' name='name' placeholder='Product name or barcode' class='query'required> <button type='submit' class='submit'>Search</button>
+        <h1 class="title">Ethical<br>Food Checker</h1>
+        <a href="#explanation" class="explanation">Explanation</a>
+        <form class="form">
+            <input type="text" name="name" placeholder="Product name or barcode" class="query"required> <button type="submit" class="submit">Search</button>
         </form>
-        <ul id='results' class='results'></ul>
-        <section id='section'><h2 class='header'>Explanation</h2>
-            <p class='text'>🐄 = Vegetarian means no meat.<br>
+        <!-- <button>Vegetarian</button><button>Vegan</button><button>No palm oil</button> -->
+        <ul id="results" class="results"></ul>
+        <section id="section"><h2 class="header">Explanation</h2>
+            <p class="text"><button class="close">&#10007;</button>
+                🐄 = Vegetarian means no meat.<br>
                 🌱 = Vegan means no animal products.<br>
                 🌴 = No palm oil.</p></section>
-        <button class='more'>More</button>
-        <p class='instructions'>Search for a product using the search bar above.</p>
-        <div class='loader'></div>
+        <button class="more">More</button>
+        <p class="instructions">Search for a product using the search bar above.</p>
+        <div class="loader"></div>
     </body>
 </html>
