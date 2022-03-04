@@ -17,9 +17,6 @@ $(".more").addEventListener("click", function() {
     get(false)
 })
 
-// Make the search bar and submit button sticky.
-window.onscroll = function() { sticky($(".form")) };
-
 window.onhashchange = function() {
     if (location.hash == "#explanation") {
         $("#section").style.display = "block"
