@@ -2,6 +2,10 @@ import { get } from "./modules/get.js";
 import { sticky } from "./modules/sticky.js";
 import { $ } from "./modules/$.js";
 
+if (window.location.hash) {
+    $("#section").style.display = "block"
+}
+
 $(".form").addEventListener("submit", function(event) {
     get(true)
 
