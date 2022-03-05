@@ -44,7 +44,7 @@ export function render(data) {
     }
 
     // If there are more pages, show the "More" button.
-    if (data.products.length == 24) {
+    if (data.page <= (data.count / data.page_size)) {
         $("#more").style.display = "block"
     }
 }
