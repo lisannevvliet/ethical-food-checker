@@ -133,6 +133,7 @@ form button {
 ul {
     list-style-type: none;
     padding: 0;
+    margin-top: 25px;
 }
 
 li {
@@ -180,8 +181,8 @@ span {
 #emoji {
     position: relative;
     display: inline;
-    margin-left: 2.5px;
-    margin-right: 2.5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #emoji span {
@@ -205,7 +206,7 @@ span {
     position: absolute;
     bottom: 100%;
     left: 50%;
-    margin-left: -5px;
+    margin-left: -2.5px;
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent #000000bf transparent;
@@ -234,6 +235,10 @@ span {
     cursor: pointer;
     padding: 10px 26px;
     margin-bottom: 25px;
+}
+
+#instructions {
+    margin-top: 25px;
 }
 
 #loader {
