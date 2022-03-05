@@ -9,24 +9,22 @@ export function render(data) {
             // Empty string for the image.
             let image = ""
 
+            // Fill the ecoscore variable with the correct image.
             switch (data.products[i].ecoscore_grade) {
                 case "a":
-                    ecoscore = "https://static.openfoodfacts.org/images/icons/ecoscore-a.svg"
+                    ecoscore = `<img src="https://static.openfoodfacts.org/images/icons/ecoscore-a.svg" alt="Eco-Score: ${data.products[i].ecoscore_grade.toUpperCase()}" id="ecoscore">`
                     break;
                 case "b":
-                    ecoscore = "https://static.openfoodfacts.org/images/icons/ecoscore-b.svg"
+                    ecoscore = `<img src="https://static.openfoodfacts.org/images/icons/ecoscore-b.svg" alt="Eco-Score: ${data.products[i].ecoscore_grade.toUpperCase()}" id="ecoscore">`
                     break;
                 case "c":
-                    ecoscore = "https://static.openfoodfacts.org/images/icons/ecoscore-c.svg"
+                    ecoscore = `<img src="https://static.openfoodfacts.org/images/icons/ecoscore-c.svg" alt="Eco-Score: ${data.products[i].ecoscore_grade.toUpperCase()}" id="ecoscore">`
                     break;
                 case "d":
-                    ecoscore = "https://static.openfoodfacts.org/images/icons/ecoscore-d.svg"
+                    ecoscore = `<img src="https://static.openfoodfacts.org/images/icons/ecoscore-d.svg" alt="Eco-Score: ${data.products[i].ecoscore_grade.toUpperCase()}" id="ecoscore">`
                     break;
                 case "e":
-                    ecoscore = "https://static.openfoodfacts.org/images/icons/ecoscore-e.svg"
-                    break;
-                default:
-                    ecoscore = "https://static.openfoodfacts.org/images/icons/ecoscore-unknown.svg"
+                    ecoscore = `<img src="https://static.openfoodfacts.org/images/icons/ecoscore-e.svg" alt="Eco-Score: ${data.products[i].ecoscore_grade.toUpperCase()}" id="ecoscore">`
             }
 
             // Add the image if there is any.
@@ -39,9 +37,8 @@ export function render(data) {
             // Add the product name, ingredients and image to the page.
             $("ul").insertAdjacentHTML("beforeend",`<li><div id="product">
             ${image}
-            <span>${data.products[i].product_name}<br>
-            ${emojis(data.products[i].ingredients_analysis_tags)}
-            <img src="${ecoscore}" alt="Eco-Score: ${data.products[i].ecoscore_grade.toUpperCase()}" id="ecoscore"></span>
+            <span><span id="bold">${data.products[i].product_name}</span><br>
+            ${emojis(data.products[i].ingredients_analysis_tags)} ${ecoscore}<span>
             </div></li>`)
         }
     }
