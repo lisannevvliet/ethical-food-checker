@@ -183,15 +183,22 @@ li {
     max-height: 100px;
     max-width: 100px;
     margin: auto;
+    transition: transform 0.2s;
+}
+
+#frame img:hover {
+    transform: scale(1.1);
 }
 
 span {
     margin: auto;
 }
 
-#bold {
+#name {
     font-weight: bold;
     font-family: lato-bold, system-ui;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
 }
 
 #emoji {

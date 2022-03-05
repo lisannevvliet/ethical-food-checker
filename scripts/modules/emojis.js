@@ -9,7 +9,7 @@ export function emojis(ingredients_analysis_tags) {
             // If the product is vegan, add an emoji.
             if (ingredients_analysis_tags[1] == "en:vegan") { emojis.push("<div id=\"emoji\">🌱<span>Vegan</span></div>") }
             // If the product is free from palm oil, add an emoji.
-            if (ingredients_analysis_tags[0] == "en:palm-oil-free") { emojis.push("<div id=\"emoji\">🌴<span>No palm oil</span></div>") }
+            if (ingredients_analysis_tags[0] == "en:palm-oil-free") { emojis.push("<div id=\"emoji\">🌴<span>Palm oil free</span></div>") }
         }
 
     // Return the corresponding emojis.

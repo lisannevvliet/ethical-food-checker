@@ -21,7 +21,7 @@ export function render(data, first) {
                 // Add the product name, ingredients and image to the page.
                 $("ul").insertAdjacentHTML("beforeend",`<li><div id="product">
                 ${image}
-                <span><span id="bold">${data.products[i].product_name}</span><br>
+                <span><span id="name">${data.products[i].product_name}</span><br>
                 ${emojis(data.products[i].ingredients_analysis_tags)} ${ecoscore(data.products[i].ecoscore_grade, )}<span>
                 </div></li>`)
             }
