@@ -8,6 +8,11 @@
     src: url("../fonts/Lato-Regular.ttf");
 }
 
+@font-face {
+    font-family: "lato-bold";
+    src: url("../fonts/Lato-Bold.ttf");
+}
+
 * {
     box-sizing: border-box;
 }
@@ -26,7 +31,7 @@ h1 {
 
 a {
     color: black;
-    font-size: 14px;
+    font-size: 1em;
     text-decoration: none;
     background-color: #d3eacd;
     border-right: 1px solid white;
@@ -57,7 +62,7 @@ form input {
     width: 37%;
     border: 1px solid white;
     border-radius: 5px 0 0 5px;
-    font-size: 16px;
+    font-size: 1em;
     background-image: url("../images/search.png");
     background-position: 13px 16px; 
     background-repeat: no-repeat;
@@ -69,7 +74,7 @@ form button {
     position: sticky;
     color: white;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1em;
     background-color: #63b776;
     border: none;
     border-radius: 0 5px 5px 0;
@@ -89,7 +94,7 @@ li {
 
 #product {
     color: black;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 2;
     text-align: center;
     width: 100vw;
@@ -110,16 +115,6 @@ li {
 
     #product {
         width: 75vw;
-    }
-
-    #frame {
-        width: 150px;
-        height: 150px;
-    }
-
-    #frame img {
-        max-height: 150px;
-        max-width: 150px;
     }
 }
 
@@ -149,6 +144,7 @@ li {
 
 span {
     font-weight: bold;
+    font-family: lato-bold, system-ui;
     margin: auto;
 }
 
@@ -163,7 +159,7 @@ span {
     background-color: #000000bf;
     color: white;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 1em;
     text-align: center;
     border-radius: 5px;
     padding: 5px 0;
@@ -200,7 +196,7 @@ section {
 }
 
 section button {
-    font-size: 24px;
+    font-size: 1.5em;
     background: white;
     border: none;
     cursor: pointer;
@@ -220,7 +216,7 @@ h2 {
     margin: auto;
     color: white;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 1em;
     background-color: #63b776;
     border: none;
     border-radius: 5px;
