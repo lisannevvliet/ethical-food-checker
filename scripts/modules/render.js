@@ -28,6 +28,9 @@ export function render(data, first) {
             }
         }
 
+        // Show the "Sort" button.
+        $("#sort").style.display = "block"
+
         // If there are more pages, show the "More" button.
         if (data.page <= (data.count / data.page_size)) {
             $("#more").style.display = "block"

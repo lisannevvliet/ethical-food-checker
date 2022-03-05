@@ -5,7 +5,7 @@ import { render } from "./render.js"
 // Counter for the page number.
 let page = 1
 
-export function get(first) {
+export function get(first, sort_by) {
     if ($("input").value != "") {
         // Hide the text, "More" button and show the loader upon searching.
         $("#instructions").style.display = "none"
@@ -21,7 +21,7 @@ export function get(first) {
         }
     
         // Send a search request to the API.
-        fetch(url(first))
+        fetch(url(page, sort_by))
         .then(function(response) {
             return response.json()
         })

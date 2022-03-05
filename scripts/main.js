@@ -19,7 +19,7 @@ $("section button").addEventListener("click", function() {
 })
 
 $("form").addEventListener("submit", function(event) {
-    get(true)
+    get(true, sort_by)
 
     // Close the keyboard after submit.
     document.activeElement.blur();
@@ -28,6 +28,34 @@ $("form").addEventListener("submit", function(event) {
     event.preventDefault()
 })
 
+// Empty string for the text in the "Sort" button.
+let sort_by = ""
+
+// EventListeners for "Sort" menu.
+$("#popularity").addEventListener("click", function() {
+    $("#sort button").innerText = "Popularity"
+    sort_by = "unique_scans_n"
+    get(true, sort_by)
+})
+
+$("#product_name").addEventListener("click", function() {
+    $("#sort button").innerText = "Product name"
+    sort_by = "product_name"
+    get(true, sort_by)
+})
+
+$("#add_date").addEventListener("click", function() {
+    $("#sort button").innerText = "Add date"
+    sort_by = "created_t"
+    get(true, sort_by)
+})
+
+$("#edit_date").addEventListener("click", function() {
+    $("#sort button").innerText = "Edit date"
+    sort_by = "last_modified_t"
+    get(true, sort_by)
+})
+
 $("#more").addEventListener("click", function() {
-    get(false)
+    get(false, sort_by)
 })

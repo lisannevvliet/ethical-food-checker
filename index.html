@@ -24,6 +24,15 @@
             <!-- https://stackoverflow.com/questions/4067469/selecting-all-text-in-html-text-input-when-clicked -->
             <input type="text" placeholder="Name or barcode" onClick="this.setSelectionRange(0, this.value.length)" required> <button type="submit">Search</button>
         </form>
+        <div id="sort">
+            <button>Popularity</button>
+            <div>
+                <a id="popularity">Popularity</a>
+                <a id="product_name">Product name</a>
+                <a id="add_date">Add date</a>
+                <a id="edit_date">Edit date</a>
+            </div>
+        </div>
         <ul></ul>
         <button id="more">More</button>
         <p id="instructions">Search for a product using the search bar above.</p>
