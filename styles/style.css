@@ -107,6 +107,19 @@ li {
     align-items: center;
 }
 
+#frame {
+    display: flex;
+    justify-content: left;
+    width: 100px;
+    height: 100px;
+}
+
+#frame img {
+    max-height: 100px;
+    max-width: 100px;
+    margin: auto;
+}
+
 /* Laptop */
 @media only screen and (min-width: 1024px) {
     form {
@@ -115,6 +128,19 @@ li {
 
     #product {
         width: 70vw;
+    }
+
+    #frame {
+        display: flex;
+        justify-content: left;
+        width: 150px;
+        height: 150px;
+    }
+    
+    #frame img {
+        max-height: 150px;
+        max-width: 150px;
+        margin: auto;
     }
 }
 
@@ -127,19 +153,19 @@ li {
     #product {
         width: 50vw;
     }
-}
 
-#frame {
-    display: flex;
-    justify-content: left;
-    width: 150px;
-    height: 150px;
-}
-
-#frame img {
-    max-height: 150px;
-    max-width: 150px;
-    margin: auto;
+    #frame {
+        display: flex;
+        justify-content: left;
+        width: 150px;
+        height: 150px;
+    }
+    
+    #frame img {
+        max-height: 150px;
+        max-width: 150px;
+        margin: auto;
+    }
 }
 
 span {
