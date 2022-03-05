@@ -129,17 +129,6 @@ li {
     }
 }
 
-/* 4K */
-@media only screen and (min-width: 2560px) {
-    form {
-        width: 40vw;
-    }
-
-    #product {
-        width: 40vw;
-    }
-}
-
 #frame {
     display: flex;
     justify-content: left;
