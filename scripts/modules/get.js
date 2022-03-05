@@ -1,4 +1,5 @@
 import { $ } from "./$.js"
+import { url } from "./url.js"
 import { render } from "./render.js"
 
 // Counter for the page number.
@@ -18,50 +19,14 @@ export function get(first) {
         } else {
             page++
         }
-
-        // URL for the search request.
-        let url = ""
-        // Boolean which shows if the search query is a barcode.
-        const barcode = /^\d+$/.test($("input").value)
-
-        if (barcode) {
-            url = `https://nl.openfoodfacts.org/cgi/search.pl?code=${$("input").value}&search_simple=1&action=process&json=1&page=${page}`
-        } else {
-            url = `https://nl.openfoodfacts.org/cgi/search.pl?search_terms=${$("input").value}&search_simple=1&action=process&json=1&page=${page}`
-        }
     
         // Send a search request to the API.
-        fetch(url)
+        fetch(url(first))
         .then(function(response) {
             return response.json()
         })
         .then(function(data) {
-            // If products exist, render them in the HTML.
-            if (data.products.length != 0) {
-                render(data)
-            } else {
-                $("#instructions").style.display = "flex"
-                let type = ""
-                
-                // Assign a name to the search query type.
-                if (barcode) {
-                    type = "barcode"
-                } else {
-                    type = "name"
-                }
-
-                // If no products exist, tell that to the user.
-                if (first) {
-                    $("#instructions").innerHTML = `No products were found with the ${type} "${$("input").value}".<br>
-                    Please try again.`
-                // If all products are already loaded, tell that to the user.
-                } else {
-                    $("#instructions").innerHTML = `All products with the ${type} "${$("input").value}" are already shown.`
-                }
-            }
-
-            // Hide the loader once the data is fetched.
-            $("#loader").style.display = "none"
+            render(data, first)
         })
     }
 }
