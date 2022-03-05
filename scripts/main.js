@@ -8,6 +8,7 @@ if (window.location.hash) {
 $("form").addEventListener("submit", function(event) {
     get(true)
 
+    // Close the keyboard after submit.
     document.activeElement.blur();
 
     // Prevent the page from reloading.
