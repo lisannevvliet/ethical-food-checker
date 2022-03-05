@@ -1,15 +1,15 @@
 @font-face {
-    font-family: "playlist-script";
+    font-family: "Playlist Script";
     src: url("../fonts/Playlist Script.otf");
 }
 
 @font-face {
-    font-family: "lato-regular";
+    font-family: "Lato Regular";
     src: url("../fonts/Lato-Regular.ttf");
 }
 
 @font-face {
-    font-family: "lato-bold";
+    font-family: "Lato Bold";
     src: url("../fonts/Lato-Bold.ttf");
 }
 
@@ -18,13 +18,13 @@
 }
 
 body {
-    font-family: lato-regular, system-ui;
+    font-family: Lato Regular, system-ui;
     background: url("../images/rm422-047.jpg") #eaf3e4 no-repeat fixed center;
     background-size: cover;
 }
 
 h1 {
-    font-family: playlist-script, system-ui;
+    font-family: Playlist Script, system-ui;
     font-size: 3em;
     text-align: center;
 }
@@ -81,7 +81,7 @@ section button:hover {
 }
 
 h2 {
-    font-family: playlist-script, system-ui;
+    font-family: Playlist Script, system-ui;
     text-align: center;
     margin-top: 20px;
 }
@@ -196,7 +196,7 @@ span {
 
 #name {
     font-weight: bold;
-    font-family: lato-bold, system-ui;
+    font-family: Lato Bold, system-ui;
     margin-left: 2.5px;
     margin-right: 2.5px;
 }
@@ -265,6 +265,8 @@ span {
 }
 
 #instructions {
+    font-weight: bold;
+    font-family: Lato Bold, system-ui;
     line-height: 1.5;
     margin-top: 25px;
 }

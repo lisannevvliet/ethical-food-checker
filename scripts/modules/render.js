@@ -14,6 +14,7 @@ export function render(data, first) {
                 // Add the image if there is any.
                 if (data.products[i].image_small_url) {
                     image = `<div id="frame"><img src="${data.products[i].image_small_url}" alt="${data.products[i].product_name}"></div>`
+                // If not, use the placeholder.
                 } else {
                     image = `<div id="frame"><img src="images/placeholder-image.png" alt="${data.products[i].product_name}"></div>`
                 }
@@ -33,23 +34,18 @@ export function render(data, first) {
         }
     } else {
         $("#instructions").style.display = "flex"
-                let type = ""
-                
-                // Assign a name to the search query type.
-                if (barcode()) {
-                    type = "barcode"
-                } else {
-                    type = "name"
-                }
 
-                // If no products exist, tell that to the user.
-                if (first) {
-                    $("#instructions").innerHTML = `No products were found with the ${type} "${$("input").value}".<br>
-                    Please try again.`
-                // If all products are already loaded, tell that to the user.
-                } else {
-                    $("#instructions").innerHTML = `All products with the ${type} "${$("input").value}" are already shown.`
-                }
+        // Assign a name to the search query type.
+        let type = barcode() ? "barcode" : "name"
+
+        // If no products exist, tell that to the user.
+        if (first) {
+            $("#instructions").innerHTML = `No products were found with the ${type} "${$("input").value}".<br>
+            Please try again.`
+        // If all products are already loaded, tell that to the user.
+        } else {
+            $("#instructions").innerHTML = `All products with the ${type} "${$("input").value}" are already shown.`
+        }
     }
 
     // Hide the loader once the data is fetched.
