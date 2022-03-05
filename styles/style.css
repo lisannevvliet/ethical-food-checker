@@ -160,58 +160,6 @@ li {
     margin: auto;
 }
 
-/* Laptop */
-@media only screen and (min-width: 1024px) {
-    form {
-        width: 70vw;
-    }
-
-    #product {
-        width: 70vw;
-    }
-
-    #frame {
-        display: flex;
-        justify-content: left;
-        width: 150px;
-        height: 150px;
-    }
-    
-    #frame img {
-        max-height: 150px;
-        max-width: 150px;
-        margin: auto;
-    }
-
-    section {
-        width: auto;
-    }
-}
-
-/* Laptop L */
-@media only screen and (min-width: 1440px) {
-    form {
-        width: 50vw;
-    }
-
-    #product {
-        width: 50vw;
-    }
-
-    #frame {
-        display: flex;
-        justify-content: left;
-        width: 150px;
-        height: 150px;
-    }
-    
-    #frame img {
-        max-height: 150px;
-        max-width: 150px;
-        margin: auto;
-    }
-}
-
 span {
     font-weight: bold;
     font-family: lato-bold, system-ui;
@@ -256,6 +204,13 @@ span {
     visibility: visible;
 }
 
+#ecoscore {
+    position: relative;
+    height: 25px;
+    bottom: -5px;
+    margin-left: 5px;
+}
+
 #more {
     display: none;
     margin: auto;
@@ -288,4 +243,56 @@ span {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* Laptop. */
+@media only screen and (min-width: 1024px) {
+    form {
+        width: 70vw;
+    }
+
+    #product {
+        width: 70vw;
+    }
+
+    #frame {
+        display: flex;
+        justify-content: left;
+        width: 150px;
+        height: 150px;
+    }
+    
+    #frame img {
+        max-height: 150px;
+        max-width: 150px;
+        margin: auto;
+    }
+
+    section {
+        width: auto;
+    }
+}
+
+/* Laptop L. */
+@media only screen and (min-width: 1440px) {
+    form {
+        width: 50vw;
+    }
+
+    #product {
+        width: 50vw;
+    }
+
+    #frame {
+        display: flex;
+        justify-content: left;
+        width: 150px;
+        height: 150px;
+    }
+    
+    #frame img {
+        max-height: 150px;
+        max-width: 150px;
+        margin: auto;
+    }
 }

@@ -1,13 +1,16 @@
-export function emojis(labels) {
+export function emojis(ingredients_analysis_tags) {
     // Empty list, to which the emojis will be added.
     let emojis = []
 
-    // If the product is vegetarian, add an emoji.
-    if (labels.includes("vegetarian")) { emojis.push("<div id=\"emoji\">🐄<span class=\"tooltiptext\">Vegetarian</span></div>") }
-    // If the product is vegan, add an emoji.
-    if (labels.includes("vegan")) { emojis.push("<div id=\"emoji\">🌱<span class=\"tooltiptext\">Vegan</span></div>") }
-    // If the product is free from palm oil, add an emoji.
-    if (labels.includes("palm oil free")) { emojis.push("<div id=\"emoji\">🌴<span class=\"tooltiptext\">Palm oil free</span></div>") }
+        // Check if there are any ingredients analysis tags.
+        if (ingredients_analysis_tags) {
+            // If the product is vegetarian, add an emoji.
+            if (ingredients_analysis_tags[2] == "en:vegetarian") { emojis.push("<div id=\"emoji\">🐄<span>Vegetarian</span></div>") }
+            // If the product is vegan, add an emoji.
+            if (ingredients_analysis_tags[1] == "en:vegan") { emojis.push("<div id=\"emoji\">🌱<span>Vegan</span></div>") }
+            // If the product is free from palm oil, add an emoji.
+            if (ingredients_analysis_tags[0] == "en:palm-oil-free") { emojis.push("<div id=\"emoji\">🌴<span>No palm oil</span></div>") }
+        }
 
     // Return the corresponding emojis.
     return emojis.join(" ")

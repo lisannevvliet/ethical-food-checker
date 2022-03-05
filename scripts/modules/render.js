@@ -1,14 +1,33 @@
 import { $ } from "./$.js"
-import { labels } from "./labels.js"
 import { emojis } from "./emojis.js"
 
 export function render(data) {
     for (let i in data.products) {
         if (data.products[i].product_name != "") {
-            // String which contains the labels (vegetarian, vegan and/or palm oil free).
-            let labels_local = labels(data.products[i].ingredients_analysis_tags)
+            // Empty string for the Eco-Score.
+            let ecoscore = ""
             // Empty string for the image.
             let image = ""
+
+            switch (data.products[i].ecoscore_grade) {
+                case "a":
+                    ecoscore = "https://static.openfoodfacts.org/images/icons/ecoscore-a.svg"
+                    break;
+                case "b":
+                    ecoscore = "https://static.openfoodfacts.org/images/icons/ecoscore-b.svg"
+                    break;
+                case "c":
+                    ecoscore = "https://static.openfoodfacts.org/images/icons/ecoscore-c.svg"
+                    break;
+                case "d":
+                    ecoscore = "https://static.openfoodfacts.org/images/icons/ecoscore-d.svg"
+                    break;
+                case "e":
+                    ecoscore = "https://static.openfoodfacts.org/images/icons/ecoscore-e.svg"
+                    break;
+                default:
+                    ecoscore = "https://static.openfoodfacts.org/images/icons/ecoscore-unknown.svg"
+            }
 
             // Add the image if there is any.
             if (data.products[i].image_small_url) {
@@ -21,8 +40,9 @@ export function render(data) {
             $("ul").insertAdjacentHTML("beforeend",`<li><div id="product">
             ${image}
             <span>${data.products[i].product_name}<br>
-            ${emojis(labels_local)}</span><br>
-            </div><br><br></li>`)
+            ${emojis(data.products[i].ingredients_analysis_tags)}
+            <img src="${ecoscore}" alt="Eco-Score: ${data.products[i].ecoscore_grade.toUpperCase()}" id="ecoscore"></span>
+            </div></li>`)
         }
     }
 
