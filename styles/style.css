@@ -76,6 +76,10 @@ section button {
     color: black;
 }
 
+section button:hover {
+    color: #555555;
+}
+
 h2 {
     font-family: playlist-script, system-ui;
     text-align: center;
@@ -89,6 +93,10 @@ section p {
 
 section a {
     color: black;
+}
+
+section a:hover {
+    color: #555555;
 }
 
 form, #instructions {
