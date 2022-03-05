@@ -8,6 +8,8 @@ if (window.location.hash) {
 $("form").addEventListener("submit", function(event) {
     get(true)
 
+    document.activeElement.blur();
+
     // Prevent the page from reloading.
     event.preventDefault()
 })
