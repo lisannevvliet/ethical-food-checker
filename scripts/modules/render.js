@@ -12,15 +12,15 @@ export function render(data) {
 
             // Add the image if there is any.
             if (data.products[i].image_small_url) {
-                image = `<div class="image"><img src="${data.products[i].image_small_url}" alt="${data.products[i].product_name}"></div>`
+                image = `<div id="frame"><img src="${data.products[i].image_small_url}" alt="${data.products[i].product_name}"></div>`
             } else {
-                image = `<div class="image"><img src="images/placeholder-image.png" alt="${data.products[i].product_name}"></div>`
+                image = `<div id="frame"><img src="images/placeholder-image.png" alt="${data.products[i].product_name}"></div>`
             }
             
             // Add the product name, ingredients and image to the page.
-            $("ul").insertAdjacentHTML("beforeend",`<li><div class="product">
+            $("ul").insertAdjacentHTML("beforeend",`<li><div id="product">
             ${image}
-            <span class="span">${data.products[i].product_name}<br>
+            <span>${data.products[i].product_name}<br>
             ${emojis(labels_local)}</span><br>
             </div><br><br></li>`)
         }
@@ -28,6 +28,6 @@ export function render(data) {
 
     // If there are more pages, show the "More" button.
     if (data.products.length == 24) {
-        $(".more").style.display = "block"
+        $("#more").style.display = "block"
     }
 }

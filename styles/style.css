@@ -18,35 +18,42 @@ body {
     background-size: cover;
 }
 
-.title {
+h1 {
     font-family: playlist-script, system-ui;
-    font-size: 64px;
+    font-size: 4em;
     text-align: center;
 }
 
-.form, .instructions {
+a {
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #d3eacd;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    border-radius: 0 5px 0 0;
+}
+
+form, #instructions {
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
-.query {
-    flex-grow: 1;
-}
-
-.form {
+form {
     position: sticky;
     top: 0;
-    width: 50%;
+    width: 100vw;
     margin: 0 auto;
     z-index: 10;
 }
 
-.instructions {
-    font-family: Lato-Regular, system-ui;
-}
-
-.query {
+form input {
+    flex-grow: 1;
     width: 37%;
     border: 1px solid white;
     border-radius: 5px 0 0 5px;
@@ -58,7 +65,7 @@ body {
     padding: 12px 20px 12px 40px;
 }
 
-.submit {
+form button {
     position: sticky;
     color: white;
     font-weight: bold;
@@ -70,7 +77,145 @@ body {
     padding: 16px 32px;
 }
 
-.more {
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+}
+
+#product {
+    color: black;
+    font-size: 16px;
+    line-height: 2;
+    text-align: center;
+    width: 100vw;
+    background-color: #ffffffbf;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+/* Tablet. */
+@media only screen and (min-width: 768px) {
+    form {
+        width: 75vw;
+    }
+
+    #product {
+        width: 75vw;
+    }
+
+    #frame {
+        width: 150px;
+        height: 150px;
+    }
+
+    #frame img {
+        max-height: 150px;
+        max-width: 150px;
+    }
+}
+
+/* Laptop. */
+@media only screen and (min-width: 992px) {
+    form {
+        width: 50vw;
+    }
+
+    #product {
+        width: 50vw;
+    }
+}
+
+#frame {
+    display: flex;
+    justify-content: left;
+    width: 150px;
+    height: 150px;
+}
+
+#frame img {
+    max-height: 150px;
+    max-width: 150px;
+    margin: auto;
+}
+
+span {
+    font-weight: bold;
+    margin: auto;
+}
+
+#emoji {
+    position: relative;
+    display: inline;
+}
+
+#emoji span {
+    visibility: hidden;
+    width: 100px;
+    background-color: #000000bf;
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    margin-left: -50px;
+}
+
+#emoji span::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #000000bf transparent;
+}
+
+#emoji:hover span {
+    visibility: visible;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    display: none;
+}
+
+section button {
+    font-size: 24px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+h2 {
+    font-family: playlist-script, system-ui;
+}
+
+#more {
     display: none;
     margin: auto;
     color: white;
@@ -84,7 +229,7 @@ body {
     margin-bottom: 25px;
 }
 
-.loader {
+#loader {
     border: 4px solid #63b776;
     border-radius: 50%;
     border-top: 4px solid white;
@@ -102,153 +247,4 @@ body {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    display: flex;
-    justify-content: center;
-}
-
-.product {
-    color: black;
-    font-size: 16px;
-    line-height: 2;
-    text-align: center;
-    width: 100%;
-    background-color: #ffffffbf;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 10px;
-    display: flex;
-    margin-bottom: 15px;
-    align-items: center;
-}
-
-@media only screen and (min-width: 768px) {
-    .product {
-        width: 75%;
-    }
-}
-@media only screen and (min-width: 992px) {
-    .product {
-        width: 50%;
-    }
-}
-
-.image {
-    display: flex;
-    justify-content: left;
-    width: 100px;
-    height: 100px;
-}
-
-.image img {
-    max-height: 100px;
-    max-width: 100px;
-    margin: auto;
-}
-
-@media only screen and (min-width: 768px) {
-    .image {
-        width: 150px;
-        height: 150px;
-    }
-
-    .image img {
-        max-height: 150px;
-        max-width: 150px;
-    }
-}
-
-.span {
-    font-weight: bold;
-    margin: auto;
-}
-
-.explanation {
-    color: black;
-    font-size: 14px;
-    text-decoration: none;
-    background-color: #d3eacd;
-    border-right: 1px solid white;
-    border-top: 1px solid white;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding: 10px;
-    border-radius: 0 5px 0 0;
-}
-
-h2 {
-    font-family: playlist-script, system-ui;
-}
-
-#section {
-    background-color: white;
-    border-radius: 10px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 50px;
-    display: none;
-}
-
-/* .header, .text {
-    position: fixed;
-    top: 40%;
-    left: 50%;
-} */
-
-.tooltip {
-    position: relative;
-    display: inline;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 100px;
-    background-color: #000000bf;
-    color: white;
-    font-weight: normal;
-    font-size: 14px;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px 0;
-    position: absolute;
-    top: 150%;
-    left: 50%;
-    margin-left: -50px;
-}
-
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent #000000bf transparent;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
-
-.close {
-    font-size: 24px;
-    background: white;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-top: 15px;
-    padding-right: 15px;
 }

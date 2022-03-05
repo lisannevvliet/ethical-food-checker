@@ -3,11 +3,11 @@ export function emojis(labels) {
     let emojis = []
 
     // If the product is vegetarian, add an emoji.
-    if (labels.includes("vegetarian")) { emojis.push("<div class=\"tooltip\">🐄<span class=\"tooltiptext\">Vegetarian</span></div>") }
+    if (labels.includes("vegetarian")) { emojis.push("<div id=\"emoji\">🐄<span class=\"tooltiptext\">Vegetarian</span></div>") }
     // If the product is vegan, add an emoji.
-    if (labels.includes("vegan")) { emojis.push("<div class=\"tooltip\">🌱<span class=\"tooltiptext\">Vegan</span></div>") }
+    if (labels.includes("vegan")) { emojis.push("<div id=\"emoji\">🌱<span class=\"tooltiptext\">Vegan</span></div>") }
     // If the product is free from palm oil, add an emoji.
-    if (labels.includes("palm oil free")) { emojis.push("<div class=\"tooltip\">🌴<span class=\"tooltiptext\">No palm oil</span></div>") }
+    if (labels.includes("palm oil free")) { emojis.push("<div id=\"emoji\">🌴<span class=\"tooltiptext\">Palm oil free</span></div>") }
 
     // Return the corresponding emojis.
     return emojis.join(" ")

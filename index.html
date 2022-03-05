@@ -6,24 +6,25 @@
         <script type="module" src="scripts/main.js"></script>
     </head>
     <body>
-        <h1 class="title">Ethical<br>Food Checker</h1>
-        <a href="#explanation" class="explanation">Explanation</a>
-        <form class="form">
-            <input type="text" name="name" placeholder="Product name or barcode" class="query"required> <button type="submit" class="submit">Search</button>
+        <h1>Ethical<br>Food Checker</h1>
+        <a href="#explanation">Explanation</a>
+        <form>
+            <input type="text" placeholder="Product name or barcode" required> <button type="submit">Search</button>
         </form>
-        <!-- <button>Vegetarian</button><button>Vegan</button><button>No palm oil</button> -->
-        <ul id="results" class="results"></ul>
-        <section id="section"><button class="close">&#10007;</button>
-            <h2 class="header">Explanation</h2>
-            <p class="text">
+        <ul></ul>
+        <section>
+            <button>&#10007;</button>
+            <h2>Explanation</h2>
+            <p>
                 🐄 = Vegetarian means no meat.<br>
                 Eating vegetarian reduces your carbon footprint by 32%.<br>
                 🌱 = Vegan means no animal products.<br>
                 Eating vegan reduces your carbon footprint by 48%<br>
                 🌴 = No palm oil.<br>
-                Source: https://www.vox.com/2014/7/2/5865109/study-going-vegetarian-could-cut-your-food-carbon-footprint-in-half</p></section>
-        <button class="more">More</button>
-        <p class="instructions">Search for a product using the search bar above.</p>
-        <div class="loader"></div>
+                Source: https://www.vox.com/2014/7/2/5865109/study-going-vegetarian-could-cut-your-food-carbon-footprint-in-half</p>
+        </section>
+        <button id="more">More</button>
+        <p id="instructions">Search for a product using the search bar above.</p>
+        <div id="loader"></div>
     </body>
 </html>
