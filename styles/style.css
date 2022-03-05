@@ -212,6 +212,8 @@ span {
 #emoji {
     position: relative;
     display: inline;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
 }
 
 #emoji span {
