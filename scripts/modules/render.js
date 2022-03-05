@@ -1,9 +1,12 @@
-import { emojis } from "./emojis.js";
-import { $ } from "./$.js";
+import { $ } from "./$.js"
+import { labels } from "./labels.js"
+import { emojis } from "./emojis.js"
 
 export function render(data) {
     for (let i in data.products) {
         if (data.products[i].product_name != "") {
+            // String which contains the labels (vegetarian, vegan and/or palm oil free).
+            let labels_local = labels(data.products[i].ingredients_analysis_tags)
             // Empty string for the image.
             let image = ""
 
@@ -18,7 +21,7 @@ export function render(data) {
             $("ul").insertAdjacentHTML("beforeend",`<li><div class="product">
             ${image}
             <span class="span">${data.products[i].product_name}<br>
-            ${emojis(data.products[i].ingredients_analysis_tags)}</span><br>
+            ${emojis(labels_local)}</span><br>
             </div><br><br></li>`)
         }
     }

@@ -1,5 +1,5 @@
-import { get } from "./modules/get.js";
-import { $ } from "./modules/$.js";
+import { $ } from "./modules/$.js"
+import { get } from "./modules/get.js"
 
 if (window.location.hash) {
     $("#section").style.display = "block"

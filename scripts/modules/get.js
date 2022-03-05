@@ -1,5 +1,5 @@
-import { $ } from "./$.js";
-import { render } from "./render.js";
+import { $ } from "./$.js"
+import { render } from "./render.js"
 
 // Counter for the page number.
 let page = 1
