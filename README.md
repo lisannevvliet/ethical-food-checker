@@ -5,6 +5,7 @@ The Ethical Food Checker is designed to help consumers make more responsible cho
 
 ## Wireflow and breakdown
 ![IMG_0138](https://user-images.githubusercontent.com/90243819/156916784-2097ab47-9e86-4116-bc7f-e175c7752679.jpeg)
+15 February 2022
 
 ## Sources
 - [Assignment](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/master/course/week-2.md)
