@@ -1,7 +1,7 @@
 import { $ } from "./$.js"
-import { barcode } from "./barcode.js"
 import { emojis } from "./emojis.js"
 import { ecoscore } from "./ecoscore.js"
+import { barcode } from "./barcode.js"
 
 export function render(data, first) {
     // If products exist, render them in the HTML.
