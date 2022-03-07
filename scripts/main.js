@@ -1,5 +1,6 @@
 import { $ } from "./modules/$.js"
 import { get } from "./modules/get.js"
+import { detect } from "./modules/detect.js"
 
 // If a hash already exists, show the explanation.
 if (window.location.hash) {
@@ -26,6 +27,11 @@ $("form").addEventListener("submit", function(event) {
 
     // Prevent the page from reloading.
     event.preventDefault()
+})
+
+
+$("#barcode").addEventListener("click", function() {
+    detect()
 })
 
 // Empty string for the text in the "Sort" button.

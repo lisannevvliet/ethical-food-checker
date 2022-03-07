@@ -22,11 +22,11 @@ export function get(first, sort_by) {
     
         // Send a search request to the API.
         fetch(url(page, sort_by))
-        .then(function(response) {
-            return response.json()
-        })
-        .then(function(data) {
-            render(data, first)
-        })
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(data) {
+                render(data, first)
+            })
     }
 }
