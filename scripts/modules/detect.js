@@ -1,5 +1,6 @@
 import { $ } from "./$.js"
 
+// https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
 export async function detect() {
     // Check if a video object already exists. If so, remove the old video object. 
     if ($('video') != null) {
