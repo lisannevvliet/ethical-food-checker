@@ -13,18 +13,24 @@ export function render(data, first) {
 
                 // Add the image if there is any.
                 if (data.products[i].image_small_url) {
-                    image = `<div id="frame"><img src="${data.products[i].image_small_url}" alt="${data.products[i].product_name}"></div>`
+                    image = `<div id="frame">
+                    <img src="${data.products[i].image_small_url}" alt="${data.products[i].product_name}">
+                    </div>`
                 // If not, use the placeholder.
                 } else {
-                    image = `<div id="frame"><img src="images/placeholder-image.png" alt="${data.products[i].product_name}"></div>`
+                    image = `<div id="frame">
+                    <img src="images/placeholder-image.png" alt="${data.products[i].product_name}">
+                    </div>`
                 }
                 
                 // Add the product name, ingredients and image to the page.
-                $("ul").insertAdjacentHTML("beforeend",`<li><div id="product">
+                $("ul").insertAdjacentHTML("beforeend",`<li>
+                <div id="product">
                 ${image}
                 <span><span id="name">${data.products[i].product_name}</span><br>
                 ${emojis(data.products[i].ingredients_analysis_tags)} ${ecoscore(data.products[i].ecoscore_grade, )}<span>
-                </div></li>`)
+                </div>
+                </li>`)
             }
         }
 
