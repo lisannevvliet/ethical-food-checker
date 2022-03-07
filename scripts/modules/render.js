@@ -28,15 +28,18 @@ export function render(data, first) {
             }
         }
 
-        // Show the "Sort" button.
-        $("#sort").style.display = "block"
+        // Show the sort options.
+        $("#sort").style.display = "flex"
 
         // If there are more pages, show the "More" button.
         if (data.page <= (data.count / data.page_size)) {
             $("#more").style.display = "block"
         }
     } else {
+        // Show the instructions.
         $("#instructions").style.display = "flex"
+        // Hide the sort options.
+        $("#sort").style.display = "none"
 
         // Assign a name to the search query type.
         let type = barcode() ? "barcode" : "name"

@@ -18,6 +18,7 @@
                 🌱 = Vegan means no animal products.<br>
                 Eating vegan reduces your carbon footprint by 48%<br><br>
                 🌴 = Palm oil free.<br><br>
+                <img src="https://static.openfoodfacts.org/images/icons/ecoscore-unknown.svg" alt="Eco-Score: unknown" id="ecoscore"> = Eco-Score.<br><br>
                 <a href="https://www.vox.com/2014/7/2/5865109/study-going-vegetarian-could-cut-your-food-carbon-footprint-in-half" target="_blank">Source</a></p>
         </section>
         <form>
@@ -25,13 +26,10 @@
             <input type="text" placeholder="Name or barcode" onClick="this.setSelectionRange(0, this.value.length)" required> <button type="submit">Search</button>
         </form>
         <div id="sort">
-            <button>Popularity</button>
-            <div>
-                <a id="popularity">Popularity</a>
-                <a id="product_name">Product name</a>
-                <a id="add_date">Add date</a>
-                <a id="edit_date">Edit date</a>
-            </div>
+            <button id="popularity">Popularity</button>
+            <button id="product_name">Product name</button>
+            <button id="add_date">Add date</button>
+            <button id="edit_date">Edit date</button>
         </div>
         <ul></ul>
         <button id="more">More</button>

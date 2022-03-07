@@ -33,7 +33,8 @@ h1 {
     color: black;
     font-size: 1em;
     text-decoration: none;
-    background-color: #d3eacd;
+    background: #d3eacd;
+    transition: background 0.3s ease-in-out;
     border-right: 1px solid white;
     border-top: 1px solid white;
     position: fixed;
@@ -44,7 +45,8 @@ h1 {
 }
 
 #explanation:hover {
-    background-color: #c0d5ba;
+    background: #c0d5ba;
+    transition: background 0.3s ease-in-out;
 }
 
 #explanation:focus {
@@ -52,7 +54,7 @@ h1 {
 }
 
 section {
-    background-color: white;
+    background: white;
     border-radius: 10px;
     position: fixed;
     top: 50%;
@@ -74,10 +76,12 @@ section button {
     padding-top: 15px;
     padding-right: 15px;
     color: black;
+    transition: background 0.3s ease-in-out;
 }
 
 section button:hover {
     color: #555555;
+    transition: background 0.3s ease-in-out;
 }
 
 h2 {
@@ -135,7 +139,8 @@ form button {
     color: white;
     font-weight: bold;
     font-size: 1em;
-    background-color: #63b776;
+    background: #63b776;
+    transition: background 0.3s ease-in-out;
     border: none;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
@@ -143,48 +148,41 @@ form button {
 }
 
 form button:hover {
-    background-color: #5aa66b;
+    background: #5aa66b;
+    transition: background 0.3s ease-in-out;
 }
 
 #sort {
-    float: right;
     display: none;
+    justify-content: center;
+    width: 50vw;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-bottom: 25px;
 }
 
 #sort button {
-    background-color: #4CAF50;
     color: white;
-    padding: 16px;
+    /* font-weight: bold; */
     font-size: 1em;
+    background: #9ac383;
+    transition: background 0.3s ease-in-out;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    padding: 5px 13px;
+    margin-left: 5px;
+    margin-right: 5px;
+    white-space: nowrap;
 }
 
-#sort:hover button {
-    background-color: #3e8e41;
+#sort button:hover {
+    background: #8cb177;
+    transition: background 0.3s ease-in-out;
 }
 
-#sort div {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #f9f9f9;
-}
-
-#sort:hover div {
-    display: block;
-}
-
-#sort div a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-}
-
-#sort div a:hover {
-    background-color: #f1f1f1;
+#sort #popularity {
+    background: #8cb177;
 }
 
 ul {
@@ -204,7 +202,7 @@ li {
     line-height: 2;
     text-align: center;
     width: 90vw;
-    background-color: #ffffffbf;
+    background: #ffffffbf;
     border: 1px solid white;
     border-radius: 5px;
     padding: 10px;
@@ -225,10 +223,6 @@ li {
     max-width: 100px;
     margin: auto;
     transition: transform 0.2s;
-}
-
-#frame img:hover {
-    transform: scale(1.1);
 }
 
 span {
@@ -252,7 +246,7 @@ span {
 #emoji span {
     visibility: hidden;
     width: 100px;
-    background-color: #000000bf;
+    background: #000000bf;
     color: white;
     font-weight: normal;
     font-size: 1em;
@@ -293,7 +287,7 @@ span {
     color: white;
     font-weight: bold;
     font-size: 1em;
-    background-color: #63b776;
+    background: #63b776;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -302,7 +296,7 @@ span {
 }
 
 #more:hover {
-    background-color: #5aa66b;
+    background: #5aa66b;
 }
 
 #instructions {
