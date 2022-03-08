@@ -84,5 +84,5 @@ $("#edit_date").addEventListener("click", function() {
 })
 
 $("#more").addEventListener("click", function() {
-    get(false, "", hash)
+    get(false, "", $("input").value)
 })
