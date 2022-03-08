@@ -105,7 +105,7 @@ section a:hover {
     color: #555555;
 }
 
-form, #instructions {
+form, .instructions {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -137,7 +137,7 @@ form input:focus {
     outline-color: #63b776;
 }
 
-#barcode {
+.barcode {
     display: none;
     cursor: pointer;
     border: none;
@@ -147,7 +147,7 @@ form input:focus {
     transition: background 0.3s ease-in-out;
 }
 
-#barcode:hover {
+.barcode:hover {
     background: #c0d5ba;
     transition: background 0.3s ease-in-out;
 }
@@ -183,7 +183,7 @@ video {
     border: 1px solid white;
 }
 
-#sort {
+.sort {
     display: none;
     justify-content: center;
     width: 90vw;
@@ -193,12 +193,12 @@ video {
     flex-flow: row wrap;
 }
 
-#sort button {
+.sort button {
     color: white;
     font-size: 1em;
     background: #9ac383;
     transition: background 0.3s ease-in-out;
-    border: none;
+    border: 1px solid white;
     border-radius: 5px;
     cursor: pointer;
     padding: 5px 13px;
@@ -207,12 +207,12 @@ video {
     white-space: nowrap;
 }
 
-#sort button:hover {
+.sort button:hover {
     background: #749262;
     transition: background 0.3s ease-in-out;
 }
 
-#sort #popularity {
+.sort .popularity {
     background: #749262;
 }
 
@@ -312,7 +312,7 @@ span {
     margin-left: 5px;
 }
 
-#more {
+.more {
     display: none;
     margin: auto;
     color: white;
@@ -326,18 +326,18 @@ span {
     margin-bottom: 25px;
 }
 
-#more:hover {
+.more:hover {
     background: #5aa66b;
 }
 
-#instructions {
+.instructions {
     font-weight: bold;
     font-family: Lato Bold, system-ui;
     line-height: 1.5;
     margin-top: 25px;
 }
 
-#loader {
+.loader {
     border: 6px solid #63b776;
     border-radius: 50%;
     border-top: 6px solid white;
@@ -357,6 +357,26 @@ span {
     100% { transform: rotate(360deg); }
 }
 
+.block {
+    display: block;
+}
+
+.none {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.sort button.darkgreen {
+    background: #749262;
+}
+
+.sort button.lightgreen {
+    background: #9ac383;
+}
+
 /* Laptop. */
 @media only screen and (min-width: 1024px) {
     h1 {
@@ -371,7 +391,7 @@ span {
         width: 70vw;
     }
 
-    #sort {
+    .sort {
         width: 70vw;
     }
 
@@ -411,7 +431,7 @@ span {
         width: 50vw;
     }
 
-    #sort {
+    .sort {
         width: 50vw;
     }
 

@@ -23,17 +23,17 @@
         </section>
         <form>
             <!-- https://stackoverflow.com/questions/4067469/selecting-all-text-in-html-text-input-when-clicked -->
-            <input type="text" placeholder="Name or barcode" onClick="this.setSelectionRange(0, this.value.length)" required><button type="button" id="barcode"><img src="./images/barcode.png" alt="Barcode"></img></button><button type="submit">Search</button>
+            <input type="text" placeholder="Name or barcode" onClick="this.setSelectionRange(0, this.value.length)" required><button type="button" class="barcode"><img src="./images/barcode.png" alt="Barcode"></img></button><button type="submit">Search</button>
         </form>
-        <div id="sort">
-            <button id="popularity">Popularity</button>
-            <button id="product_name">Product name</button>
-            <button id="add_date">Recently added</button>
-            <button id="edit_date">Recently edited</button>
+        <div class="sort">
+            <button class="popularity">Popularity</button>
+            <button class="product_name">Product name</button>
+            <button class="add_date">Recently added</button>
+            <button class="edit_date">Recently edited</button>
         </div>
         <ul></ul>
-        <button id="more">More</button>
-        <p id="instructions">Search for a product using the search bar above.</p>
-        <div id="loader"></div>
+        <button class="more">More</button>
+        <p class="instructions">Search for a product using the search bar above.</p>
+        <div class="loader"></div>
     </body>
 </html>

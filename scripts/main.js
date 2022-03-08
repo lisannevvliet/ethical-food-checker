@@ -7,22 +7,25 @@ import "./modules/vendor/routie.min.js"
 routie ({
     ":hash": hash => {
         get(true, "", hash)
+
+        // Fill the search query with the hash (barcode).
+        $('form input').value = window.location.hash.substring(1)
     }
 })
 
 // If the explanation is clicked, show the section.
 $("#explanation").addEventListener("click", function() {
-    $("section").style.display = "block"
+    $("section").classList.add("block")
 })
 
 // If the explanation is closed, hide the section.
 $("section button").addEventListener("click", function() {
-    $("section").style.display = "none"
+    $("section").classList.remove("block")
 })
 
 // Only show the barcode button if the BarcodeDetector is supported.
 if ("BarcodeDetector" in window) {
-    $("#barcode").style.display = "block"
+    $(".barcode").classList.add("block")
 }
 
 // If the title is clicked, show the homepage.
@@ -35,54 +38,53 @@ $("form").addEventListener("submit", function(event) {
     window.location.hash = $("input").value
 
     // Close the keyboard after submit.
-    document.activeElement.blur();
+    document.activeElement.blur()
 
     // Prevent the page from reloading.
     event.preventDefault()
 })
 
-
-$("#barcode").addEventListener("click", function() {
+$(".barcode").addEventListener("click", function() {
     detect()
 })
 
-// EventListeners for "Sort" menu.
-$("#popularity").addEventListener("click", function() {
-    $("#popularity").style.backgroundColor = "#749262"
-    $("#product_name").style.backgroundColor = "#9ac383"
-    $("#add_date").style.backgroundColor = "#9ac383"
-    $("#edit_date").style.backgroundColor = "#9ac383"
+// EventListeners for sort options.
+$(".popularity").addEventListener("click", function() {
+    $(".popularity").classList.remove("lightgreen")
+    $(".product_name").classList.remove("darkgreen")
+    $(".add_date").classList.remove("darkgreen")
+    $(".edit_date").classList.remove("darkgreen")
 
     get(true, "unique_scans_n", $("input").value)
 })
 
-$("#product_name").addEventListener("click", function() {
-    $("#popularity").style.backgroundColor = "#9ac383"
-    $("#product_name").style.backgroundColor = "#749262"
-    $("#add_date").style.backgroundColor = "#9ac383"
-    $("#edit_date").style.backgroundColor = "#9ac383"
+$(".product_name").addEventListener("click", function() {
+    $(".popularity").classList.add("lightgreen")
+    $(".product_name").classList.add("darkgreen")
+    $(".add_date").classList.remove("darkgreen")
+    $(".edit_date").classList.remove("darkgreen")
 
     get(true, "product_name", $("input").value)
 })
 
-$("#add_date").addEventListener("click", function() {
-    $("#popularity").style.backgroundColor = "#9ac383"
-    $("#product_name").style.backgroundColor = "#9ac383"
-    $("#add_date").style.backgroundColor = "#749262"
-    $("#edit_date").style.backgroundColor = "#9ac383"
+$(".add_date").addEventListener("click", function() {
+    $(".popularity").classList.add("lightgreen")
+    $(".product_name").classList.remove("darkgreen")
+    $(".add_date").classList.add("darkgreen")
+    $(".edit_date").classList.remove("darkgreen")
 
     get(true, "created_t", $("input").value)
 })
 
-$("#edit_date").addEventListener("click", function() {
-    $("#popularity").style.backgroundColor = "#9ac383"
-    $("#product_name").style.backgroundColor = "#9ac383"
-    $("#add_date").style.backgroundColor = "#9ac383"
-    $("#edit_date").style.backgroundColor = "#749262"
+$(".edit_date").addEventListener("click", function() {
+    $(".popularity").classList.add("lightgreen")
+    $(".product_name").classList.remove("darkgreen")
+    $(".add_date").classList.remove("darkgreen")
+    $(".edit_date").classList.add("darkgreen")
 
     get(true, "last_modified_t", $("input").value)
 })
 
-$("#more").addEventListener("click", function() {
+$(".more").addEventListener("click", function() {
     get(false, "", $("input").value)
 })

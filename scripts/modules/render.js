@@ -35,30 +35,30 @@ export function render(data, first) {
         })
 
         // Show the sort options.
-        $("#sort").style.display = "flex"
+        $(".sort").classList.add("flex")
 
         // If there are more pages, show the "More" button.
         if (data.page <= (data.count / data.page_size)) {
-            $("#more").style.display = "block"
+            $(".more").classList.add("block")
         }
     } else {
         // Show the instructions.
-        $("#instructions").style.display = "flex"
+        $(".instructions").classList.remove("none")
         // Hide the sort options.
-        $("#sort").style.display = "none"
+        $(".sort").classList.remove("flex")
 
         // Assign a name to the search query type.
         let type = barcode() ? "barcode" : "name"
 
         // If no products exist, tell that to the user.
         if (first) {
-            $("#instructions").textContent = `No products were found with the ${type} "${$("input").value}". Please try again.`
+            $(".instructions").textContent = `No products were found with the ${type} "${$("input").value}". Please try again.`
         // If all products are already loaded, tell that to the user.
         } else {
-            $("#instructions").textContent = `All products with the ${type} "${$("input").value}" are already shown.`
+            $(".instructions").textContent = `All products with the ${type} "${$("input").value}" are already shown.`
         }
     }
 
     // Hide the loader once the data is fetched.
-    $("#loader").style.display = "none"
+    $(".loader").classList.remove("block")
 }

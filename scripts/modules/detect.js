@@ -11,7 +11,7 @@ export async function detect() {
     const video = document.createElement("video")
     video.srcObject = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
     video.autoplay = true
-    $("#sort").before(video)
+    $(".sort").before(video)
 
     // Search for barcodes within the video object.
     function render() {
