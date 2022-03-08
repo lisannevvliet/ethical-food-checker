@@ -47,7 +47,7 @@ $("#popularity").addEventListener("click", function() {
     $("#add_date").style.backgroundColor = "#9ac383"
     $("#edit_date").style.backgroundColor = "#9ac383"
 
-    get(true, "unique_scans_n", hash)
+    get(true, "unique_scans_n", $("input").value)
 })
 
 $("#product_name").addEventListener("click", function() {
@@ -56,7 +56,7 @@ $("#product_name").addEventListener("click", function() {
     $("#add_date").style.backgroundColor = "#9ac383"
     $("#edit_date").style.backgroundColor = "#9ac383"
 
-    get(true, "product_name", hash)
+    get(true, "product_name", $("input").value)
 })
 
 $("#add_date").addEventListener("click", function() {
@@ -65,7 +65,7 @@ $("#add_date").addEventListener("click", function() {
     $("#add_date").style.backgroundColor = "#749262"
     $("#edit_date").style.backgroundColor = "#9ac383"
 
-    get(true, "created_t", hash)
+    get(true, "created_t", $("input").value)
 })
 
 $("#edit_date").addEventListener("click", function() {
@@ -74,7 +74,7 @@ $("#edit_date").addEventListener("click", function() {
     $("#add_date").style.backgroundColor = "#9ac383"
     $("#edit_date").style.backgroundColor = "#749262"
 
-    get(true, "last_modified_t", hash)
+    get(true, "last_modified_t", $("input").value)
 })
 
 $("#more").addEventListener("click", function() {
