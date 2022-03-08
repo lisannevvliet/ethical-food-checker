@@ -1,4 +1,5 @@
 import { $ } from "./$.js"
+import { get } from "./get.js"
 
 // https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
 export async function detect() {
@@ -19,14 +20,16 @@ export async function detect() {
             .detect(video)
             .then((barcodes) => {
                 barcodes.forEach((barcode) => {
-                    // Fill the search query with the barcode.
-                    $('form input').value = barcode.rawValue
-                    // Submit the form (executes too early).
-                    // document.getElementById("submit").click();
-                    // $("form").submit()
+                    if ($('video')) {
+                        // Fill the search query with the barcode.
+                        $('form input').value = barcode.rawValue
+                        
+                        // Submit the form.
+                        get(true, "")
 
-                    // Remove the video object.
-                    $('video').remove()
+                        // Remove the video object.
+                        $('video').remove()
+                    }
                 })
             })
             // Catch an error and show it in the console.
@@ -35,7 +38,6 @@ export async function detect() {
 
     // Keep searching for barcodes within the video object.
     (function loop() {
-        // Only keep searching if a video object exists.
         if ($('video')) {
             requestAnimationFrame(loop)
             render()

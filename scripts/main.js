@@ -21,12 +21,11 @@ $("section button").addEventListener("click", function() {
 
 // Only show the barcode button if the BarcodeDetector is supported.
 if ("BarcodeDetector" in window) {
-    console.log("BarcodeDetector niet ondersteund.")
     $("#barcode").style.display = "block"
 }
 
 $("form").addEventListener("submit", function(event) {
-    get(true, sort_by)
+    get(true, "")
 
     // Close the keyboard after submit.
     document.activeElement.blur();
@@ -56,7 +55,6 @@ $("#product_name").addEventListener("click", function() {
     $("#add_date").style.backgroundColor = "#9ac383"
     $("#edit_date").style.backgroundColor = "#9ac383"
 
-
     get(true, "product_name")
 })
 
@@ -79,5 +77,5 @@ $("#edit_date").addEventListener("click", function() {
 })
 
 $("#more").addEventListener("click", function() {
-    get(false, sort_by)
+    get(false, "")
 })
