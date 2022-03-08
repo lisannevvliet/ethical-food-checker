@@ -40,52 +40,42 @@ $("#barcode").addEventListener("click", function() {
     detect()
 })
 
-// Empty string for the text in the "Sort" button.
-let sort_by = ""
-
 // EventListeners for "Sort" menu.
 $("#popularity").addEventListener("click", function() {
-    sort_by = "unique_scans_n"
-
     $("#popularity").style.backgroundColor = "#749262"
     $("#product_name").style.backgroundColor = "#9ac383"
     $("#add_date").style.backgroundColor = "#9ac383"
     $("#edit_date").style.backgroundColor = "#9ac383"
 
-    get(true, sort_by)
+    get(true, "unique_scans_n")
 })
 
 $("#product_name").addEventListener("click", function() {
-    sort_by = "product_name"
     $("#popularity").style.backgroundColor = "#9ac383"
     $("#product_name").style.backgroundColor = "#749262"
     $("#add_date").style.backgroundColor = "#9ac383"
     $("#edit_date").style.backgroundColor = "#9ac383"
 
 
-    get(true, sort_by)
+    get(true, "product_name")
 })
 
 $("#add_date").addEventListener("click", function() {
-    sort_by = "created_t"
-
     $("#popularity").style.backgroundColor = "#9ac383"
     $("#product_name").style.backgroundColor = "#9ac383"
     $("#add_date").style.backgroundColor = "#749262"
     $("#edit_date").style.backgroundColor = "#9ac383"
 
-    get(true, sort_by)
+    get(true, "created_t")
 })
 
 $("#edit_date").addEventListener("click", function() {
-    sort_by = "last_modified_t"
-
     $("#popularity").style.backgroundColor = "#9ac383"
     $("#product_name").style.backgroundColor = "#9ac383"
     $("#add_date").style.backgroundColor = "#9ac383"
     $("#edit_date").style.backgroundColor = "#749262"
 
-    get(true, sort_by)
+    get(true, "last_modified_t")
 })
 
 $("#more").addEventListener("click", function() {
