@@ -116,6 +116,7 @@ form {
     width: 90vw;
     margin: 0 auto;
     z-index: 9;
+    border: 1px solid white;
 }
 
 form input {
@@ -141,6 +142,13 @@ form input:focus {
     border: none;
     padding-left: 10px;
     padding-right: 10px;
+    background: #d3eacd;
+    transition: background 0.3s ease-in-out;
+}
+
+#barcode:hover {
+    background: #c0d5ba;
+    transition: background 0.3s ease-in-out;
 }
 
 form button img {
@@ -171,6 +179,7 @@ video {
     margin-top: 25px;
     width: 90vw;
     border-radius: 5px;
+    border: 1px solid white;
 }
 
 #sort {
