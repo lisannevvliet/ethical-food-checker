@@ -25,6 +25,12 @@ if ("BarcodeDetector" in window) {
     $("#barcode").style.display = "block"
 }
 
+// If the title is clicked, show the homepage.
+$("#title").addEventListener("click", function() {
+    window.location.hash = ""
+    location.reload()
+})
+
 $("form").addEventListener("submit", function(event) {
     window.location.hash = $("input").value
 

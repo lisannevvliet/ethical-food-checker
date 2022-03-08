@@ -27,6 +27,7 @@ h1 {
     font-family: Playlist Script, system-ui;
     font-size: 3em;
     text-align: center;
+    cursor: pointer;
 }
 
 #explanation {
