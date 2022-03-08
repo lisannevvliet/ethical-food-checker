@@ -197,12 +197,12 @@ video {
 }
 
 #sort button:hover {
-    background: #8cb177;
+    background: #749262;
     transition: background 0.3s ease-in-out;
 }
 
 #sort #popularity {
-    background: #8cb177;
+    background: #749262;
 }
 
 ul {

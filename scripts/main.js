@@ -47,7 +47,7 @@ let sort_by = ""
 $("#popularity").addEventListener("click", function() {
     sort_by = "unique_scans_n"
 
-    $("#popularity").style.backgroundColor = "#8cb177"
+    $("#popularity").style.backgroundColor = "#749262"
     $("#product_name").style.backgroundColor = "#9ac383"
     $("#add_date").style.backgroundColor = "#9ac383"
     $("#edit_date").style.backgroundColor = "#9ac383"
@@ -58,7 +58,7 @@ $("#popularity").addEventListener("click", function() {
 $("#product_name").addEventListener("click", function() {
     sort_by = "product_name"
     $("#popularity").style.backgroundColor = "#9ac383"
-    $("#product_name").style.backgroundColor = "#8cb177"
+    $("#product_name").style.backgroundColor = "#749262"
     $("#add_date").style.backgroundColor = "#9ac383"
     $("#edit_date").style.backgroundColor = "#9ac383"
 
@@ -71,7 +71,7 @@ $("#add_date").addEventListener("click", function() {
 
     $("#popularity").style.backgroundColor = "#9ac383"
     $("#product_name").style.backgroundColor = "#9ac383"
-    $("#add_date").style.backgroundColor = "#8cb177"
+    $("#add_date").style.backgroundColor = "#749262"
     $("#edit_date").style.backgroundColor = "#9ac383"
 
     get(true, sort_by)
@@ -83,7 +83,7 @@ $("#edit_date").addEventListener("click", function() {
     $("#popularity").style.backgroundColor = "#9ac383"
     $("#product_name").style.backgroundColor = "#9ac383"
     $("#add_date").style.backgroundColor = "#9ac383"
-    $("#edit_date").style.backgroundColor = "#8cb177"
+    $("#edit_date").style.backgroundColor = "#749262"
 
     get(true, sort_by)
 })
