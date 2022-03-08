@@ -6,20 +6,20 @@ import { barcode } from "./barcode.js"
 export function render(data, first) {
     // If products exist, render them in the HTML.
     if (data.products.length != 0) {
-        for (let i in data.products) {
-            if (data.products[i].product_name != "") {
+        data.products.forEach(product => {
+            if (product.product_name != "") {
                 // Empty string for the image.
                 let image = ""
 
                 // Add the image if there is any.
-                if (data.products[i].image_small_url) {
+                if (product.image_small_url) {
                     image = `<div id="frame">
-                    <img src="${data.products[i].image_small_url}" alt="${data.products[i].product_name}">
+                    <img src="${product.image_small_url}" alt="${product.product_name}">
                     </div>`
                 // If not, use the placeholder.
                 } else {
                     image = `<div id="frame">
-                    <img src="images/placeholder-image.png" alt="${data.products[i].product_name}">
+                    <img src="images/placeholder-image.png" alt="${product.product_name}">
                     </div>`
                 }
                 
@@ -27,12 +27,12 @@ export function render(data, first) {
                 $("ul").insertAdjacentHTML("beforeend",`<li>
                 <div id="product">
                 ${image}
-                <span><span id="name">${data.products[i].product_name}</span><br>
-                ${emojis(data.products[i].ingredients_analysis_tags)} ${ecoscore(data.products[i].ecoscore_grade, )}<span>
+                <span><span id="name">${product.product_name}</span><br>
+                ${emojis(product.ingredients_analysis_tags)} ${ecoscore(product.ecoscore_grade, )}<span>
                 </div>
                 </li>`)
             }
-        }
+        })
 
         // Show the sort options.
         $("#sort").style.display = "flex"
