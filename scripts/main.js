@@ -19,6 +19,12 @@ $("section button").addEventListener("click", function() {
     history.pushState("", document.title, window.location.pathname + window.location.search);
 })
 
+// Only show the barcode button if the BarcodeDetector is supported.
+if ("BarcodeDetector" in window) {
+    console.log("BarcodeDetector niet ondersteund.")
+    $("#barcode").style.display = "block"
+}
+
 $("form").addEventListener("submit", function(event) {
     get(true, sort_by)
 
