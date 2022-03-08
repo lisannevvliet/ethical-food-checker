@@ -55,7 +55,7 @@ h1 {
 
 section {
     background: white;
-    border-radius: 10px;
+    border-radius: 5px;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -137,7 +137,6 @@ form input:focus {
 #barcode {
     cursor: pointer;
     border: none;
-    border-radius: none;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -169,6 +168,7 @@ video {
     margin: 0 auto;
     margin-top: 25px;
     width: 90vw;
+    border-radius: 5px;
 }
 
 #sort {
@@ -178,6 +178,7 @@ video {
     margin: 0 auto;
     margin-top: 10px;
     padding-bottom: 25px;
+    flex-flow: row wrap;
 }
 
 #sort button {
