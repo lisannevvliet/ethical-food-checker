@@ -52,11 +52,10 @@ export function render(data, first) {
 
         // If no products exist, tell that to the user.
         if (first) {
-            $("#instructions").innerHTML = `No products were found with the ${type} "${$("input").value}".<br>
-            Please try again.`
+            $("#instructions").textContent = `No products were found with the ${type} "${$("input").value}". Please try again.`
         // If all products are already loaded, tell that to the user.
         } else {
-            $("#instructions").innerHTML = `All products with the ${type} "${$("input").value}" are already shown.`
+            $("#instructions").textContent = `All products with the ${type} "${$("input").value}" are already shown.`
         }
     }
 
