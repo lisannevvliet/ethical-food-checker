@@ -1,22 +1,23 @@
 import { $ } from "./modules/$.js"
 import { get } from "./modules/get.js"
 import { detect } from "./modules/detect.js"
+import "./modules/vendor/routie.min.js"
 
-// If a hash already exists, show the explanation.
-if (window.location.hash) {
+// Get the products from the API when the hash changes.
+routie ({
+    ":hash": hash => {
+        get(true, "", hash)
+    }
+})
+
+// If the explanation is clicked, show the section.
+$("#explanation").addEventListener("click", function() {
     $("section").style.display = "block"
-}
+})
 
-// If a hash is added, show the explanation.
-window.onhashchange = function() {
-    $("section").style.display = "block"
-}
-
-// If the explanation is closed, remove the hash.
-// https://stackoverflow.com/questions/1397329/how-to-remove-the-hash-from-window-location-url-with-javascript-without-page-r
+// If the explanation is closed, hide the section.
 $("section button").addEventListener("click", function() {
     $("section").style.display = "none"
-    history.pushState("", document.title, window.location.pathname + window.location.search);
 })
 
 // Only show the barcode button if the BarcodeDetector is supported.
@@ -25,7 +26,7 @@ if ("BarcodeDetector" in window) {
 }
 
 $("form").addEventListener("submit", function(event) {
-    get(true, "")
+    window.location.hash = $("input").value
 
     // Close the keyboard after submit.
     document.activeElement.blur();
@@ -46,7 +47,7 @@ $("#popularity").addEventListener("click", function() {
     $("#add_date").style.backgroundColor = "#9ac383"
     $("#edit_date").style.backgroundColor = "#9ac383"
 
-    get(true, "unique_scans_n")
+    get(true, "unique_scans_n", hash)
 })
 
 $("#product_name").addEventListener("click", function() {
@@ -55,7 +56,7 @@ $("#product_name").addEventListener("click", function() {
     $("#add_date").style.backgroundColor = "#9ac383"
     $("#edit_date").style.backgroundColor = "#9ac383"
 
-    get(true, "product_name")
+    get(true, "product_name", hash)
 })
 
 $("#add_date").addEventListener("click", function() {
@@ -64,7 +65,7 @@ $("#add_date").addEventListener("click", function() {
     $("#add_date").style.backgroundColor = "#749262"
     $("#edit_date").style.backgroundColor = "#9ac383"
 
-    get(true, "created_t")
+    get(true, "created_t", hash)
 })
 
 $("#edit_date").addEventListener("click", function() {
@@ -73,9 +74,9 @@ $("#edit_date").addEventListener("click", function() {
     $("#add_date").style.backgroundColor = "#9ac383"
     $("#edit_date").style.backgroundColor = "#749262"
 
-    get(true, "last_modified_t")
+    get(true, "last_modified_t", hash)
 })
 
 $("#more").addEventListener("click", function() {
-    get(false, "")
+    get(false, "", hash)
 })

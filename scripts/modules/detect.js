@@ -1,5 +1,4 @@
 import { $ } from "./$.js"
-import { get } from "./get.js"
 
 // https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
 export async function detect() {
@@ -21,11 +20,11 @@ export async function detect() {
             .then((barcodes) => {
                 barcodes.forEach((barcode) => {
                     if ($('video')) {
-                        // Fill the search query with the barcode.
-                        $('form input').value = barcode.rawValue
-                        
-                        // Submit the form.
-                        get(true, "")
+                        // Change the hash.
+                        window.location.hash = barcode.rawValue
+
+                        // Fill the search query with the hash (barcode).
+                        $('form input').value = window.location.hash.substring(1)
 
                         // Remove the video object.
                         $('video').remove()
