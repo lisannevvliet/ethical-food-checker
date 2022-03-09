@@ -31,6 +31,7 @@ h1 {
 }
 
 #explanation {
+    color: black;
     font-size: 1em;
     background: #d3eacd;
     transition: background 0.3s ease-in-out;
@@ -38,7 +39,9 @@ h1 {
     bottom: 0;
     left: 0;
     padding: 10px;
-    border: 1px solid #c0d5ba;
+    border: none;
+    border-top: 1px solid #c0d5ba;
+    border-right: 1px solid #c0d5ba;
     border-radius: 0 5px 0 0;
     cursor: pointer;
 }
