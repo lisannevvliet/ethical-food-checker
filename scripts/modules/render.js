@@ -27,8 +27,8 @@ export function render(data, first) {
 
                 // Add the ingredients if there are any.
                 if (product.ingredients_text) {
-                    ingredients = `<button class="collapsible">Ingredients</button>
-                    <div class="content">${product.ingredients_text}</div>`
+                    ingredients = `<details><summary>Ingredients</summary>
+                    <p>${product.ingredients_text}</p></details>`
                 }
                 
                 // Add the product name, ingredients and image to the page.
@@ -48,21 +48,6 @@ export function render(data, first) {
         // If there are more pages, show the "More" button.
         if (data.page <= (data.count / data.page_size)) {
             $(".more").classList.add("block")
-        }
-
-        var coll = document.getElementsByClassName("collapsible")
-        var i
-
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active")
-                var content = this.nextElementSibling
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px"
-                }
-            })
         }
     } else {
         // Show the instructions.

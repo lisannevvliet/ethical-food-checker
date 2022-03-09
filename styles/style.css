@@ -156,6 +156,7 @@ form button[type="submit"] {
     position: sticky;
     color: white;
     font-weight: bold;
+    font-family: Lato Bold, system-ui;
     font-size: 1em;
     background: #63b776;
     transition: background 0.3s ease-in-out;
@@ -307,42 +308,19 @@ span {
     margin-left: 5px;
 }
 
-.collapsible {
-    background-color: #f1f1f1bf;
+details summary {
     cursor: pointer;
-    border-radius: 5px;
-    padding: 5px 10px;
-    width: 10em;
-    border: none;
-    font-size: 1em;
-    /* position: relative; */
 }
 
-.active, .collapsible:hover {
-    background-color: #dbdbdbbf;
-    border-radius: 5px 5px 0 0;
+details[open] summary {
+    font-weight: bold;
+    font-family: Lato Bold, system-ui;
 }
 
-.collapsible:after {
-    content: '\002B';
-    float: right;
-    margin-left: 5px;
-}
-
-.active:after {
-    content: "\2212";
-}
-
-.content {
-    padding: 0 5px;
-    border-radius: 0 0 5px 5px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1bf;
-    /* position: absolute; */
-    width: 10em;
+details p {
     margin: 0 auto;
+    margin-top: -2.5px;
+    padding: 0 50px;
 }
 
 .more {
@@ -350,6 +328,7 @@ span {
     margin: auto;
     color: white;
     font-weight: bold;
+    font-family: Lato Bold, system-ui;
     font-size: 1em;
     background: #63b776;
     border: none;
@@ -437,20 +416,13 @@ span {
         justify-content: left;
         width: 150px;
         height: 150px;
+        flex-shrink: 0;
     }
     
     #frame img {
         max-height: 150px;
         max-width: 150px;
         margin: auto;
-    }
-
-    .collapsible {
-        width: 20em;
-    }
-
-    .content {
-        width: 20em;
     }
 
     section {
@@ -487,13 +459,5 @@ span {
         max-height: 150px;
         max-width: 150px;
         margin: auto;
-    }
-
-    .collapsible {
-        width: 30em;
-    }
-
-    .content {
-        width: 30em;
     }
 }
