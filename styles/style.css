@@ -253,11 +253,13 @@ span {
 #name {
     font-weight: bold;
     font-family: Lato Bold, system-ui;
+    font-size: 1.1em;
     margin-left: 2.5px;
     margin-right: 2.5px;
 }
 
 #emoji {
+    font-size: 1.4em;
     position: relative;
     display: inline;
     margin-left: 5px;
@@ -270,12 +272,12 @@ span {
     background: #000000bf;
     color: white;
     font-weight: normal;
-    font-size: 1em;
+    font-size: 16px;
     text-align: center;
     border-radius: 5px;
-    padding: 5px 0;
+    padding: 2.5px 0;
     position: absolute;
-    top: 150%;
+    top: 130%;
     left: 50%;
     margin-left: -50px;
 }
