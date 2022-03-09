@@ -81,6 +81,7 @@ section button:hover {
 
 h2 {
     font-family: Playlist Script, system-ui;
+    font-size: 2em;
     text-align: center;
     margin-top: 20px;
 }
