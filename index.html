@@ -10,7 +10,7 @@
         <a id="title"><h1>Ethical<br>Food Checker</h1></a>
         <button id="explanation">Explanation</button>
         <section>
-            <button>&#10007;</button>
+            <button aria-label="Close">&#10007;</button>
             <h2>Explanation</h2>
             <p>
                 🐄 = Vegetarian means no meat.<br>
@@ -23,7 +23,9 @@
         </section>
         <form>
             <!-- https://stackoverflow.com/questions/4067469/selecting-all-text-in-html-text-input-when-clicked -->
-            <input type="text" placeholder="Name or barcode" onClick="this.setSelectionRange(0, this.value.length)" required><button type="button" class="barcode"><img src="./images/barcode.png" alt="Barcode"></img></button><button type="submit">Search</button>
+            <input type="text" placeholder="Name or barcode" aria-label="Name or barcode" onClick="this.setSelectionRange(0, this.value.length)" required>
+            <button type="button" aria-label="Barcode" class="barcode"><img src="./images/barcode.png" alt="Barcode"></img></button>
+            <button type="submit">Search</button>
         </form>
         <div class="sort">
             <button class="popularity">Popularity</button>
