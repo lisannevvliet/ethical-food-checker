@@ -28,7 +28,7 @@ export function render(data, first) {
                 <div id="product">
                 ${image}
                 <span><span id="name">${product.product_name}</span><br>
-                ${emojis(product.ingredients_analysis_tags)} ${ecoscore(product.ecoscore_grade, )}<span>
+                ${emojis(product.ingredients_analysis_tags)} ${ecoscore(product.ecoscore_grade)}<span>
                 </div>
                 </li>`)
             }

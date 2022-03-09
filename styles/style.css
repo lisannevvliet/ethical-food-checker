@@ -258,7 +258,7 @@ span {
     margin-right: 2.5px;
 }
 
-#emoji {
+#tooltip {
     font-size: 1.4em;
     position: relative;
     display: inline;
@@ -266,7 +266,7 @@ span {
     margin-right: 5px;
 }
 
-#emoji span {
+#tooltip span {
     visibility: hidden;
     width: 100px;
     background: #000000bf;
@@ -282,7 +282,7 @@ span {
     margin-left: -50px;
 }
 
-#emoji span::after {
+#tooltip span::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -293,7 +293,7 @@ span {
     border-color: transparent transparent #000000bf transparent;
 }
 
-#emoji:hover span {
+#tooltip:hover span {
     visibility: visible;
 }
 
