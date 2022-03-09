@@ -308,19 +308,18 @@ span {
     bottom: -4px;
 }
 
-details summary {
+#product details summary {
     cursor: pointer;
 }
 
-details[open] summary {
+#product details[open] summary {
     font-weight: bold;
     font-family: Lato Bold, system-ui;
 }
 
-details p {
+#product details p {
     margin: 0 auto;
-    margin-top: -2.5px;
-    padding: 0 50px;
+    line-height: 1;
 }
 
 .more {
