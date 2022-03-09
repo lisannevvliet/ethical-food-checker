@@ -9,7 +9,7 @@ The Ethical Food Checker is designed to help consumers make more responsible cho
 ## Poster image
 ![](https://user-images.githubusercontent.com/90243819/157475189-912e1065-cc9f-4de9-bcbf-9003c723c397.png)
 
-## Installment
+## Installation
 To view, click on the link above. To make local modifications, download the files, open them in a code editor and start editing!
 
 ## Usement
