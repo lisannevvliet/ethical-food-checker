@@ -35,9 +35,9 @@ export function render(data, first) {
                 $("ul").insertAdjacentHTML("beforeend",`<li>
                 <div id="product">
                 ${image}
-                <span><span id="name">${product.product_name}</span><br>
-                ${emojis(product.ingredients_analysis_tags)} ${ecoscore(product.ecoscore_grade)}<span><br>
-                ${ingredients}
+                <span><span id="name">${product.product_name}</span>
+                <p>${emojis(product.ingredients_analysis_tags)} ${ecoscore(product.ecoscore_grade)}</p><span>
+                <p>${ingredients}</p>
                 </li>`)
             }
         })
