@@ -7,6 +7,14 @@ export async function detect() {
         $('video').remove()
     }
 
+    // Hide the sort options.
+    $(".sort").classList.remove("flex")
+    // Clear the results.
+    $("ul").innerHTML = ""
+    // Hide the "More" button.
+    $(".more").classList.remove("block")
+    
+
     // Create a video object and add it to the HTML.
     const video = document.createElement("video")
     video.srcObject = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })

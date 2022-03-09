@@ -13,6 +13,7 @@ export function get(first, sort_by, hash) {
 
     // Trace whether the first page should be loaded.
     if (first) {
+        // Clear the results.
         $("ul").innerHTML = ""
         page = 1
     } else {
