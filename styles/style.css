@@ -31,15 +31,14 @@ h1 {
 }
 
 #explanation {
-    color: black;
     font-size: 1em;
-    text-decoration: none;
     background: #d3eacd;
     transition: background 0.3s ease-in-out;
     position: fixed;
     bottom: 0;
     left: 0;
     padding: 10px;
+    border: none;
     border-radius: 0 5px 0 0;
     cursor: pointer;
 }
@@ -47,10 +46,6 @@ h1 {
 #explanation:hover {
     background: #c0d5ba;
     transition: background 0.3s ease-in-out;
-}
-
-#explanation:focus {
-    outline-color: #63b776;
 }
 
 section {
