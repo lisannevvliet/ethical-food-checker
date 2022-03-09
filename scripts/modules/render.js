@@ -10,6 +10,8 @@ export function render(data, first) {
             if (product.product_name != "") {
                 // Empty string for the image.
                 let image = ""
+                // Empty string for the ingredients.
+                let ingredients = ""
 
                 // Add the image if there is any.
                 if (product.image_small_url) {
@@ -22,14 +24,20 @@ export function render(data, first) {
                     <img src="images/placeholder-image.png" alt="${product.product_name}">
                     </div>`
                 }
+
+                // Add the ingredients if there are any.
+                if (product.ingredients_text) {
+                    ingredients = `<button class="collapsible">Ingredients</button>
+                    <div class="content">${product.ingredients_text}</div>`
+                }
                 
                 // Add the product name, ingredients and image to the page.
                 $("ul").insertAdjacentHTML("beforeend",`<li>
                 <div id="product">
                 ${image}
                 <span><span id="name">${product.product_name}</span><br>
-                ${emojis(product.ingredients_analysis_tags)} ${ecoscore(product.ecoscore_grade)}<span>
-                </div>
+                ${emojis(product.ingredients_analysis_tags)} ${ecoscore(product.ecoscore_grade)}<span><br>
+                ${ingredients}
                 </li>`)
             }
         })
@@ -40,6 +48,21 @@ export function render(data, first) {
         // If there are more pages, show the "More" button.
         if (data.page <= (data.count / data.page_size)) {
             $(".more").classList.add("block")
+        }
+
+        var coll = document.getElementsByClassName("collapsible")
+        var i
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active")
+                var content = this.nextElementSibling
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px"
+                }
+            })
         }
     } else {
         // Show the instructions.

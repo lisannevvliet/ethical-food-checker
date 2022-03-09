@@ -26,7 +26,7 @@ export async function detect() {
         new BarcodeDetector()
             .detect(video)
             .then((barcodes) => {
-                barcodes.forEach((barcode) => {
+                barcodes.forEach(barcode => {
                     if ($('video')) {
                         // Change the hash.
                         window.location.hash = barcode.rawValue
