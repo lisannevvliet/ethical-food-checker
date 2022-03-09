@@ -8,7 +8,7 @@ routie ({
     ":hash": hash => {
         get(true, "", hash)
 
-        // Fill the search query with the hash (barcode).
+        // Fill the search query with the hash (name or barcode).
         $('form input').value = window.location.hash.substring(1)
     }
 })
