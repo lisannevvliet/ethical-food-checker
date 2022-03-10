@@ -83,6 +83,10 @@ section button:hover {
     transition: background 0.3s ease-in-out;
 }
 
+section span {
+    font-size: 1.4em;
+}
+
 h2 {
     font-family: Playlist Script, system-ui;
     font-size: 2em;
