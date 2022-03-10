@@ -14,7 +14,7 @@
 [https://lisannevvliet.github.io/ethical-food-checker/](https://lisannevvliet.github.io/ethical-food-checker/)
 
 ## Description
-The Ethical Food Checker is designed to help consumers make more responsible choices in the supermarket. By scanning the barcode of a product or typing in the product name, the user can find out in less than a minute whether the product is vegetarian or vegan, if it contains palm oil, and what its Eco-Score is. The website uses the Open Food Facts API and shows worldwide products, to ensure that the user finds the corresponding product.
+The Ethical Food Checker is designed to help consumers make more responsible choices in the supermarket. By scanning the barcode of a product or typing in the product name, the user can find out in less than a minute whether the product is vegetarian or vegan, if it contains palm oil, and what its Eco-Score is. The website uses the Open Food Facts API and shows worldwide products, to ensure that the user finds the right product.
 
 ## Poster
 ![](https://user-images.githubusercontent.com/90243819/157631107-88be7783-f74d-49e4-a444-572a6f04c55f.png)
@@ -23,7 +23,7 @@ The Ethical Food Checker is designed to help consumers make more responsible cho
 To view, visit the [GitHub Pages site](https://lisannevvliet.github.io/ethical-food-checker/). To make local modifications, clone the repository and edit the files in an IDE.
 
 ## User manual and features
-To use the Ethical Food Checker, simply enter the name or barcode of a product and click "Search." It is also possible to scan a barcode using the camera in Google Chrome and Microsoft Edge. Upon searching, a list of matching products will be displayed, as well as the corresponding labels. The meaning of the labels can be found by moving the cursor over the labels, or by clicking on "Explanation" in the lower left corner of the screen. Besides the product names and labels, pictures and ingredients can also be found in this overview. Lastly, the results can be sorted by popularity, product name, date added and date edited.
+To use the Ethical Food Checker, simply enter the name or barcode of a product and click "Search." It is also possible to scan a barcode using the camera in Google Chrome and Microsoft Edge. Upon searching, a list of matching products will be displayed, as well as the corresponding labels. The meaning of the labels can be found by moving the cursor over the labels, or by clicking on "Explanation" in the lower left corner of the screen. Besides the product names and labels, pictures and ingredients can also be found in this overview. Lastly, there is an option to sort the results by popularity, product name, date added and date edited.
 
 ## Activity diagram
 ![](https://github.com/lisannevvliet/ethical-food-checker/files/8222245/Activity.diagram.pdf)
