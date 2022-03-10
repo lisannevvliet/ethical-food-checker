@@ -224,7 +224,7 @@ li {
 #product {
     color: black;
     font-size: 1em;
-    line-height: 2;
+    line-height: 1.5;
     text-align: center;
     width: 90vw;
     background: #ffffffbf;
@@ -238,9 +238,10 @@ li {
 
 #frame {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     width: 100px;
     height: 100px;
+    flex-shrink: 0;
 }
 
 #frame img {
@@ -251,7 +252,7 @@ li {
 }
 
 span {
-    margin: auto;
+    margin: 0 auto;
 }
 
 #name {
@@ -276,13 +277,12 @@ span {
     width: 100px;
     background: #000000bf;
     color: white;
-    font-weight: normal;
     font-size: 16px;
     text-align: center;
     border-radius: 5px;
     padding: 2.5px 0;
     position: absolute;
-    top: 130%;
+    bottom: 140%;
     left: 50%;
     margin-left: -50px;
 }
@@ -290,12 +290,12 @@ span {
 #tooltip span::after {
     content: "";
     position: absolute;
-    bottom: 100%;
+    top: 100%;
     left: 50%;
-    margin-left: -2.5px;
+    margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent #000000bf transparent;
+    border-color: #000000bf transparent transparent transparent;
 }
 
 #tooltip:hover span {
@@ -318,13 +318,16 @@ span {
 }
 
 #product details p {
-    margin: 0 auto;
     line-height: 1;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .more {
     display: none;
-    margin: auto;
+    margin: 0 auto;
     color: white;
     font-weight: bold;
     font-family: Lato Bold, system-ui;
@@ -358,7 +361,7 @@ span {
     margin-block-start: 1em;
     margin-inline-start: 1em;
     display: none;
-    margin: auto;
+    margin: 0 auto;
     margin-bottom: 25px;
     margin-top: 25px;
 }
@@ -407,6 +410,7 @@ span {
     }
 
     #product {
+        line-height: 2;
         width: 70vw;
     }
 
@@ -415,17 +419,17 @@ span {
     }
 
     #frame {
-        display: flex;
-        justify-content: left;
         width: 150px;
         height: 150px;
-        flex-shrink: 0;
     }
     
     #frame img {
         max-height: 150px;
         max-width: 150px;
-        margin: auto;
+    }
+
+    #tooltip span {
+        padding: 0;
     }
 
     section {
@@ -452,8 +456,6 @@ span {
     }
 
     #frame {
-        display: flex;
-        justify-content: left;
         width: 150px;
         height: 150px;
     }
@@ -461,6 +463,5 @@ span {
     #frame img {
         max-height: 150px;
         max-width: 150px;
-        margin: auto;
     }
 }
