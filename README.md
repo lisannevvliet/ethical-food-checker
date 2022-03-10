@@ -14,7 +14,7 @@
 [https://lisannevvliet.github.io/ethical-food-checker/](https://lisannevvliet.github.io/ethical-food-checker/)
 
 ## Description
-The Ethical Food Checker is designed to help consumers make more responsible choices in the supermarket. By scanning the barcode of a product or typing in the product name, the user can find out in less than a minute whether the product is vegetarian or vegan, and what its Eco-Score is. The website uses the Open Food Facts API and shows worldwide products, to ensure that the user finds the corresponding product.
+The Ethical Food Checker is designed to help consumers make more responsible choices in the supermarket. By scanning the barcode of a product or typing in the product name, the user can find out in less than a minute whether the product is vegetarian or vegan, if it contains palm oil, and what its Eco-Score is. The website uses the Open Food Facts API and shows worldwide products, to ensure that the user finds the corresponding product.
 
 ## Poster
 ![](https://user-images.githubusercontent.com/90243819/157631107-88be7783-f74d-49e4-a444-572a6f04c55f.png)
