@@ -48,3 +48,4 @@ The completed tasks can be found in the [commit messages](https://github.com/lis
 - [ ] Expand the picture when clicked in higher quality.
 - [ ] Auto-reload new products at the bottom of the page.
 - [ ] Keep the product name in place when expanding a lot of ingredients.
+- [ ] Remember the sort options when reloading the page, by storing it in the hash.
