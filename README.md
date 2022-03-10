@@ -20,7 +20,7 @@ The Ethical Food Checker is designed to help consumers make more responsible cho
 ![](https://user-images.githubusercontent.com/90243819/157631107-88be7783-f74d-49e4-a444-572a6f04c55f.png)
 
 ## Installation
-To view, visit the [GitHub Pages site](https://lisannevvliet.github.io/ethical-food-checker/). To make local modifications, clone the repository and edit the files in your IDE of choice.
+To view, visit the [GitHub Pages site](https://lisannevvliet.github.io/ethical-food-checker/). To make local modifications, clone the repository and edit the files in an IDE.
 
 ## User manual and features
 To use the Ethical Food Checker, simply enter the name or barcode of a product and click "Search." It is also possible to scan a barcode using the camera in Google Chrome and Microsoft Edge. Upon searching, a list of matching products will be displayed, as well as the corresponding labels. The meaning of the labels can be found by moving your mouse over the labels, or by clicking on "Explanation" in the lower left corner of the screen. Besides the product names and labels, you can also find pictures and ingredients in this overview. Finally, you can sort the results by popularity, product name, date added and date edited.
