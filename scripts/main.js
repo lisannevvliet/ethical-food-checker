@@ -28,6 +28,11 @@ if ("BarcodeDetector" in window) {
     $(".barcode").classList.add("block")
 }
 
+// Show the camera upon clicking the barcode button.
+$(".barcode").addEventListener("click", function() {
+    detect()
+})
+
 // If the title is clicked, show the homepage.
 $("#title").addEventListener("click", function() {
     window.location.hash = ""
@@ -42,10 +47,6 @@ $("form").addEventListener("submit", function(event) {
 
     // Prevent the page from reloading.
     event.preventDefault()
-})
-
-$(".barcode").addEventListener("click", function() {
-    detect()
 })
 
 // EventListeners for sort options.
